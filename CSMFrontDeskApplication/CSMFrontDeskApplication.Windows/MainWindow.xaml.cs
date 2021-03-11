@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace CSMFrontDeskApplication.Windows
         public MainWindow()
         {
             InitializeComponent();
+
+            SchoolDBContext context = new SchoolDBContext();
+
+            var birthdays = context.Birthdays.ToList();
+
+            dgBirthdays.ItemsSource = birthdays;
         }
     }
 }

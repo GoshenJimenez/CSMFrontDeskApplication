@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="Models\Birthday.cs" />
     <Compile Include="Models\FAQEntries.cs" />
+    <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\StudentAssistant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -127,6 +128,7 @@
   <ItemGroup>
     <Folder Include="Birthdays\" />
     <Folder Include="FAQEntries\" />
+    <Folder Include="Guests\" />
     <Folder Include="StudentAssistants\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

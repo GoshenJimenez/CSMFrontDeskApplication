@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSMFrontDeskApplication.Windows.Models
 {
-    class FAQEntries
+    public class FAQEntries
     {
+            public Guid? Id { get; set; }
+            public string Question { get; set; }
+            public string Answer { get; set; }
+           
     }
 }

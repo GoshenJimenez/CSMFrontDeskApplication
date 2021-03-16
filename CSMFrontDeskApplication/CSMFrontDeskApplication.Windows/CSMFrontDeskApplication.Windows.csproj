@@ -128,9 +128,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Announcements\" />
     <Folder Include="Birthdays\" />
     <Folder Include="FAQEntries\" />
     <Folder Include="Guests\" />
+    <Folder Include="School Locations\" />
     <Folder Include="StudentAssistants\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

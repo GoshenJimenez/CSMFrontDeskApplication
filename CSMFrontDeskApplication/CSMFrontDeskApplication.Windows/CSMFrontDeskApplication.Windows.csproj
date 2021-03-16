@@ -99,6 +99,7 @@
     <Compile Include="Models\FAQEntries.cs" />
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\StudentAssistant.cs" />
+    <Compile Include="Models\StudentAssistantLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -12,9 +12,14 @@ DEBUG;TRACE
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\App.xaml
 11151548125
 
+<<<<<<< HEAD
 13587556711
 26-581854675
+=======
+13-1550212719
+261722463715
+>>>>>>> 7622c22f43671a0fa393a9d6fe4217d4c1310cc0
 MainWindow.xaml;
 
-True
+False
 

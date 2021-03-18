@@ -16,5 +16,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
         }
 
         public DbSet<Birthday> Birthdays { get; set; }
+
+        //TODO: Add your models here 1 model 1 DbSet
     }
 }

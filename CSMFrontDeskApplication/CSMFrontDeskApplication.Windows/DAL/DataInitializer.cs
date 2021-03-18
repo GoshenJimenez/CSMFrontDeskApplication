@@ -31,7 +31,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
                 Date = DateTime.Parse("06/04/2006")
             });
 
-
+            //TODO: Add your Data here
 
             context.SaveChanges();
         }

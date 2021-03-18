@@ -1,5 +1,4 @@
 ﻿using CSMFrontDeskApplication.Windows.BLL;
-using CSMFrontDeskApplication.Windows.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,27 +11,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CSMFrontDeskApplication.Windows
+namespace CSMFrontDeskApplication.Windows.Birthdays
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for List.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class List : Window
     {
-        public MainWindow()
+        private int pageIndex = 1;
+
+        public List()
         {
             InitializeComponent();
-
-
+            var bdays = BirthdayBLL.Search(pageIndex, 1);
+            dgBirthdays.ItemsSource = bdays.Items;
         }
 
-        private void btnBirthdays_Click(object sender, RoutedEventArgs e)
+        private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            Birthdays.List birthdayWindow = new Birthdays.List();
-            birthdayWindow.Show();
+            pageIndex = pageIndex + 1;
+            var bdays = BirthdayBLL.Search(pageIndex, 1);
+            dgBirthdays.ItemsSource = bdays.Items;
         }
+
+
     }
 }

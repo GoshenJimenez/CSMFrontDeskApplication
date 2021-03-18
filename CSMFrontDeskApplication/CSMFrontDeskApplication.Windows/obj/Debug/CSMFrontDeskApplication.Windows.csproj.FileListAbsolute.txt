@@ -46,3 +46,5 @@ C:\Users\Nicole\Documents\Major\CSMFRONTDESKAPPLICATIONN\CSMFrontDeskApplication
 C:\Users\Nicole\Documents\Major\CSMFRONTDESKAPPLICATIONN\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.csproj.CopyComplete
 C:\Users\Nicole\Documents\Major\CSMFRONTDESKAPPLICATIONN\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.exe
 C:\Users\Nicole\Documents\Major\CSMFRONTDESKAPPLICATIONN\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.pdb
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\List.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\List.baml

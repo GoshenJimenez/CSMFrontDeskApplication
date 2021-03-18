@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgBirthdays" HorizontalAlignment="Left" Height="100" Margin="43,157,0,0" VerticalAlignment="Top" Width="688"/>
-
+        <Button x:Name="btnBirthdays" Content="Birthdays" HorizontalAlignment="Left" Margin="37,50,0,0" VerticalAlignment="Top" Width="118" Height="21" Click="btnBirthdays_Click"/>
     </Grid>
 </Window>

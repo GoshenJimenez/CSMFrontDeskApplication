@@ -23,5 +23,7 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
         {
             InitializeComponent();
         }
+
+
     }
 }

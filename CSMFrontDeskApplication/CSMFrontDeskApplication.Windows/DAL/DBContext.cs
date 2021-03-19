@@ -25,6 +25,8 @@ namespace CSMFrontDeskApplication.Windows.DAL
 
         public DbSet<GuestLog> GuestLog { get; set; }
 
+        public DbSet<FAQEntry> FAQEntries { get; set; }
+
         //TODO: Add your models here 1 model 1 DbSet
     }
 }

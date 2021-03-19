@@ -79,6 +79,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Guests\Guest.xaml.cs">
+      <DependentUpon>Guest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\GuestLog.xaml.cs">
+      <DependentUpon>GuestLog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StudentAssistants\StudentAssistant.xaml.cs">
       <DependentUpon>StudentAssistant.xaml</DependentUpon>
     </Compile>
@@ -86,6 +92,14 @@
       <DependentUpon>StudentAssistantLog.xaml</DependentUpon>
     </Compile>
     <Page Include="Birthdays\List.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guests\Guest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guests\GuestLog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,7 +169,6 @@
   <ItemGroup>
     <Folder Include="Announcements\" />
     <Folder Include="FAQEntries\" />
-    <Folder Include="Guests\" />
     <Folder Include="School Locations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -121,10 +121,86 @@ namespace CSMFrontDeskApplication.Windows.DAL
             });
 
             context.SaveChanges();
+
+            context.Guest.Add(new Models.Guest()
+            {
+                Id = Guid.NewGuid(),
+                PersonName = "Danilo Flores",
+                Address = "Luacan, Dinalupihan, Bataan",
+                Age = 25,
+                Gender = Models.Enums.Gender.Male
+            });
+            context.Guest.Add(new Models.Guest()
+            {
+                Id = Guid.NewGuid(),
+                PersonName = "Andrea Angeles",
+                Address = "Saguing, Dinalupihan, Bataan",
+                Age = 18,
+                Gender = Models.Enums.Gender.Female
+            });
+            context.Guest.Add(new Models.Guest()
+            {
+                Id = Guid.NewGuid(),
+                PersonName = "Bert Sanggalang",
+                Address = "San Ramon, Dinalupihan, Bataan",
+                Age = 30,
+                Gender = Models.Enums.Gender.Male
+            });
+            context.Guest.Add(new Models.Guest()
+            {
+                Id = Guid.NewGuid(),
+                PersonName = "Danica Castro",
+                Address = "Luacan, Dinalupihan, Bataan",
+                Age = 17,
+                Gender = Models.Enums.Gender.Female
+            });
+            context.Guest.Add(new Models.Guest()
+            {
+                Id = Guid.NewGuid(),
+                PersonName = "Leo Lim",
+                Address = "Bacong, Hermosa, Bataan",
+                Age = 21,
+                Gender = Models.Enums.Gender.Male
+            });
+            context.SaveChanges();
+
+            context.GuestLog.Add(new Models.GuestLog()
+            {
+                Id = Guid.NewGuid(),
+                GuestId = 156,
+                VisitAt = DateTime.Parse("03/04/2021"),
+                Temperature = 36
+            });
+            context.GuestLog.Add(new Models.GuestLog()
+            {
+                Id = Guid.NewGuid(),
+                GuestId = 143,
+                VisitAt = DateTime.Parse("03/11/2021"),
+                Temperature = 36
+            });
+            context.GuestLog.Add(new Models.GuestLog()
+            {
+                Id = Guid.NewGuid(),
+                GuestId = 121,
+                VisitAt = DateTime.Parse("03/15/2021"),
+                Temperature = 35
+            });
+            context.GuestLog.Add(new Models.GuestLog()
+            {
+                Id = Guid.NewGuid(),
+                GuestId = 159,
+                VisitAt = DateTime.Parse("03/10/2021"),
+                Temperature = 36
+            });
+            context.GuestLog.Add(new Models.GuestLog()
+            {
+                Id = Guid.NewGuid(),
+                GuestId = 131,
+                VisitAt = DateTime.Parse("03/07/2021"),
+                Temperature = 37
+            });
+            context.SaveChanges();
             //TODO: Add your Data here
-
-
-
         }
 
     }

@@ -85,6 +85,7 @@
     <Compile Include="Guests\GuestLog.xaml.cs">
       <DependentUpon>GuestLog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Enums\Gender.cs" />
     <Compile Include="StudentAssistants\StudentAssistant.xaml.cs">
       <DependentUpon>StudentAssistant.xaml</DependentUpon>
     </Compile>

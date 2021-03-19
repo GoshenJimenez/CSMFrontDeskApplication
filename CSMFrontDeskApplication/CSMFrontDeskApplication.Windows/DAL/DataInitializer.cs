@@ -200,6 +200,38 @@ namespace CSMFrontDeskApplication.Windows.DAL
                 Temperature = 37
             });
             context.SaveChanges();
+
+            context.FAQEntries.Add(new Models.FAQEntry()
+            {
+                Id = Guid.NewGuid(),
+                Question = "Where to pay tuition fee?",
+               Answer = "Tuition fee can be paid at windows 1 and 2, they are nearly located at CSM quadrangle"
+            });
+            context.FAQEntries.Add(new Models.FAQEntry()
+            {
+                Id = Guid.NewGuid(),
+                Question = "Where graduating students can acquire their requirements?",
+                Answer = "Graduating students can get their requirements at the registar office. Ask the S.A for guidance"
+            });
+            context.FAQEntries.Add(new Models.FAQEntry()
+            {
+                Id = Guid.NewGuid(),
+                Question = "Where can I get the school card?",
+                Answer = "You can get your school card at the CSM quadrangle"
+            });
+            context.FAQEntries.Add(new Models.FAQEntry()
+            {
+                Id = Guid.NewGuid(),
+                Question = "Where should the modules be able to pass and receive another?",
+                Answer = "You can pass and get another module at the registar or at the CSM quadrangle. It is better to ask S.A for guidance."
+            });
+            context.FAQEntries.Add(new Models.FAQEntry()
+            {
+                Id = Guid.NewGuid(),
+                Question = "How to apply for student admission?",
+                Answer = "Visit the CSM FB page. Click the link for the student registration, then properly accomplish all the information"
+            });
+            context.SaveChanges();
             //TODO: Add your Data here
         }
 

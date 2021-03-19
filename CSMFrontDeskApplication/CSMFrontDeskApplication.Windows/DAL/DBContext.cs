@@ -20,6 +20,8 @@ namespace CSMFrontDeskApplication.Windows.DAL
         public DbSet<StudentAssistant> StudentAssistants { get; set; }
 
         public DbSet<StudentAssistantLog> StudentAssistantLogs { get; set; }
+        public DbSet<Guest> Guest { get; set; }
+        public DbSet<GuestLog> GuestLog { get; set; }
 
         //TODO: Add your models here 1 model 1 DbSet
     }

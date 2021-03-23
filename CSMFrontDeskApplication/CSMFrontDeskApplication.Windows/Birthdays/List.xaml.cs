@@ -30,7 +30,7 @@ namespace CSMFrontDeskApplication.Windows.Birthdays
 
         private void ShowData()
         {
-            var bdays = BirthdayBLL.Search((int)pageIndex, 1);
+            var bdays = BirthdayBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
             dgBirthdays.ItemsSource = bdays.Items;
             pageCount = bdays.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount; //Showing page 1 of 20
@@ -70,6 +70,14 @@ namespace CSMFrontDeskApplication.Windows.Birthdays
         {
             pageIndex = pageCount;
             ShowData();
+        }
+
+        private void txtSearchKeyword_OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ShowData();
+            }
         }
     }
 }

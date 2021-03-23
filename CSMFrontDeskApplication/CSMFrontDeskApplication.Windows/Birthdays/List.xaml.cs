@@ -20,22 +20,56 @@ namespace CSMFrontDeskApplication.Windows.Birthdays
     /// </summary>
     public partial class List : Window
     {
-        private int pageIndex = 1;
-
+        private long pageIndex = 1;
+        private long pageCount = 0;
         public List()
         {
             InitializeComponent();
-            var bdays = BirthdayBLL.Search(pageIndex, 1);
+            ShowData();
+        }
+
+        private void ShowData()
+        {
+            var bdays = BirthdayBLL.Search((int)pageIndex, 1);
             dgBirthdays.ItemsSource = bdays.Items;
+            pageCount = bdays.PageCount;
+            lblPage.Content = " Showing page " + pageIndex + " of " + pageCount; //Showing page 1 of 20
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             pageIndex = pageIndex + 1;
-            var bdays = BirthdayBLL.Search(pageIndex, 1);
-            dgBirthdays.ItemsSource = bdays.Items;
+
+            if(pageIndex > pageCount)
+            {
+                pageIndex = pageCount;
+            }
+
+            ShowData();
         }
 
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = 1;
+            ShowData();
+        }
 
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex - 1;
+
+            if(pageIndex < 1)
+            {
+                pageIndex = 1;
+            }
+
+            ShowData();
+        }
+
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageCount;
+            ShowData();
+        }
     }
 }

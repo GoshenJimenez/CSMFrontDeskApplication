@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSMFrontDeskApplication.Windows.Birthdays"
         mc:Ignorable="d"
-        Title="List" Height="450" Width="800">
-    <Grid>
-        <DataGrid x:Name="dgBirthdays" HorizontalAlignment="Left" Height="100" Margin="43,157,0,0" VerticalAlignment="Top" Width="688"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="43,308,0,0" VerticalAlignment="Top" Width="75" Click="btnNext_Click"/>
+        Title="List" Height="464.268" Width="769.677">
+    <Grid Margin="0,0,0.2,1.4">
+        <DataGrid x:Name="dgBirthdays" HorizontalAlignment="Left" Height="273" Margin="43,76,0,0" VerticalAlignment="Top" Width="688"/>
+        <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="302,370,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnNext_Click"/>
+        <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="43,370,0,0" VerticalAlignment="Top" Width="40" Height="34" RenderTransformOrigin="-1.605,0.544" Click="btnFirst_Click"/>
+        <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="95,370,0,0" VerticalAlignment="Top" Width="40" Click="btnPrev_Click" Height="34" RenderTransformOrigin="-1.605,0.544"/>
+        <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="355,370,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnLast_Click"/>
+        <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="148,374,0,0" VerticalAlignment="Top" Width="142"/>
 
     </Grid>
 </Window>

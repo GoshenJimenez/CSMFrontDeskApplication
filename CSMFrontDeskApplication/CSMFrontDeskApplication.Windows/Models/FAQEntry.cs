@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSMFrontDeskApplication.Windows.Models
 {
-    public class FAQEntries
+    public class FAQEntry
     {
             public Guid? Id { get; set; }
             public string Question { get; set; }

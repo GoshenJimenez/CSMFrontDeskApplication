@@ -20,12 +20,57 @@ namespace CSMFrontDeskApplication.Windows.Guests
     /// </summary>
     public partial class GuestLog : Window
     {
+        private long pageIndex = 1;
+        private long pageCount = 0;
         public GuestLog()
         {
             InitializeComponent();
 
             var guestlogs = GuestLogBLL.Search();
             dgGuestLogs.ItemsSource = guestlogs.Items;
+        }
+        private void ShowData()
+        {
+            var guestlogs = GuestLogBLL.Search((int)pageIndex, 1);
+            dgGuestLogs.ItemsSource = guestlogs.Items;
+            pageCount = guestlogs.PageCount;
+            lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex + 1;
+
+            if (pageIndex > pageCount)
+            {
+                pageIndex = pageCount;
+            }
+
+            ShowData();
+        }
+
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = 1;
+            ShowData();
+        }
+
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex - 1;
+
+            if (pageIndex < 1)
+            {
+                pageIndex = 1;
+            }
+
+            ShowData();
+        }
+
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageCount;
+            ShowData();
         }
     }
 }

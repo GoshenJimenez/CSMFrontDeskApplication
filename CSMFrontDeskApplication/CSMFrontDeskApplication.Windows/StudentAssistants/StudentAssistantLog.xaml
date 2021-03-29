@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="StudentAssistantLog" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgStudentAssistantLogs" HorizontalAlignment="Left" Height="334" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
+        <DataGrid x:Name="dgStudentAssistantLogs" HorizontalAlignment="Left" Height="288" Margin="10,56,0,0" VerticalAlignment="Top" Width="772"/>
+        <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="30,362,0,0" VerticalAlignment="Top" Width="40" Height="34" RenderTransformOrigin="-1.605,0.544" Click="btnFirst_Click"/>
+        <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="88,362,0,0" VerticalAlignment="Top" Width="40" Click="btnPrev_Click" Height="34" RenderTransformOrigin="-1.605,0.544"/>
+        <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="308,362,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnNext_Click"/>
+        <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="367,362,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnLast_Click"/>
+        <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="148,370,0,0" VerticalAlignment="Top" Width="142"/>
 
     </Grid>
 </Window>

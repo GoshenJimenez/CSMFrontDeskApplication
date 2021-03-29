@@ -20,13 +20,55 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
     /// </summary>
     public partial class StudentAssistantLog : Window
     {
+        private long pageIndex = 1;
+        private long pageCount = 0;
         public StudentAssistantLog()
         {
             InitializeComponent();
-            var studentassistantlogs = StudentAssistantLogBLL.Search();
+            ShowData();
+        }
+        private void ShowData()
+        {
+            var studentassistantlogs = StudentAssistantLogBLL.Search((int)pageIndex, 1);
             dgStudentAssistantLogs.ItemsSource = studentassistantlogs.Items;
+            pageCount = studentassistantlogs.PageCount;
+            lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
         }
 
-        
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = 1;
+            ShowData();
+        }
+
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex - 1;
+
+            if (pageIndex < 1)
+            {
+                pageIndex = 1;
+            }
+
+            ShowData();
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex + 1;
+
+            if (pageIndex > pageCount)
+            {
+                pageIndex = pageCount;
+            }
+
+            ShowData();
+        }
+
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageCount;
+            ShowData();
+        }
     }
 }

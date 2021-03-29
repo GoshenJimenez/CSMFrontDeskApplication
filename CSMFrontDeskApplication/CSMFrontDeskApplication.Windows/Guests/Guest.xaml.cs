@@ -25,9 +25,7 @@ namespace CSMFrontDeskApplication.Windows.Guests
         public Guest()
         {
             InitializeComponent();
-            
-            var guests = GuestBLL.Search();
-            dgGuests.ItemsSource = guests.Items;
+            ShowData();
         }
         private void ShowData()
         {

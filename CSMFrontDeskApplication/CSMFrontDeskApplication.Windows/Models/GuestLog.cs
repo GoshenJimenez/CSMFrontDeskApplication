@@ -35,27 +35,6 @@ namespace CSMFrontDeskApplication.Windows.Models
                 return this.VisitAt.Year;
             }
         }
-        public int Hour
-        {
-            get
-            {
-                return this.VisitAt.Hour;
-            }
-        }
-        public int Minute
-        {
-            get
-            {
-                return this.VisitAt.Minute;
-            }
-        }
-        public int Second
-        {
-            get
-            {
-                return this.VisitAt.Second;
-            }
-        }
     }
 
 }

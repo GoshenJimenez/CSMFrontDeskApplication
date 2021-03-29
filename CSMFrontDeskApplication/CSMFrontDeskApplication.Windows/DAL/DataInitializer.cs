@@ -14,21 +14,21 @@ namespace CSMFrontDeskApplication.Windows.DAL
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Goshen Jimenez",
-                Date = DateTime.Parse("08/02/1982")
+                Date = DateTime.Parse("02/08/1982")
             });
 
             context.Birthdays.Add(new Models.Birthday()
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Xiah Alara Jimenez",
-                Date = DateTime.Parse("14/12/2015")
+                Date = DateTime.Parse("12/14/2015")
             });
 
             context.Birthdays.Add(new Models.Birthday()
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Aya Junea Jimenez",
-                Date = DateTime.Parse("06/04/2006")
+                Date = DateTime.Parse("04/06/2006")
             });
 
             context.SaveChanges();
@@ -122,7 +122,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
 
             context.SaveChanges();
 
-            context.Guest.Add(new Models.Guest()
+            context.Guests.Add(new Models.Guest()
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Danilo Flores",
@@ -130,7 +130,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
                 Age = 25,
                 Gender = Models.Enums.Gender.Male
             });
-            context.Guest.Add(new Models.Guest()
+            context.Guests.Add(new Models.Guest()
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Andrea Angeles",
@@ -138,7 +138,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
                 Age = 18,
                 Gender = Models.Enums.Gender.Female
             });
-            context.Guest.Add(new Models.Guest()
+            context.Guests.Add(new Models.Guest()
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Bert Sanggalang",
@@ -146,7 +146,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
                 Age = 30,
                 Gender = Models.Enums.Gender.Male
             });
-            context.Guest.Add(new Models.Guest()
+            context.Guests.Add(new Models.Guest()
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Danica Castro",
@@ -154,7 +154,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
                 Age = 17,
                 Gender = Models.Enums.Gender.Female
             });
-            context.Guest.Add(new Models.Guest()
+            context.Guests.Add(new Models.Guest()
             {
                 Id = Guid.NewGuid(),
                 PersonName = "Leo Lim",
@@ -164,39 +164,39 @@ namespace CSMFrontDeskApplication.Windows.DAL
             });
             context.SaveChanges();
 
-            context.GuestLog.Add(new Models.GuestLog()
+            context.GuestLogs.Add(new Models.GuestLog()
             {
                 Id = Guid.NewGuid(),
                 GuestId = 156,
-                VisitAt = DateTime.Parse("04/03/2021"),
+                VisitAt = DateTime.Parse("03/04/2021"),
                 Temperature = 36
             });
-            context.GuestLog.Add(new Models.GuestLog()
+            context.GuestLogs.Add(new Models.GuestLog()
             {
                 Id = Guid.NewGuid(),
                 GuestId = 143,
-                VisitAt = DateTime.Parse("11/03/2021"),
+                VisitAt = DateTime.Parse("03/11/2021"),
                 Temperature = 36
             });
-            context.GuestLog.Add(new Models.GuestLog()
+            context.GuestLogs.Add(new Models.GuestLog()
             {
                 Id = Guid.NewGuid(),
                 GuestId = 121,
-                VisitAt = DateTime.Parse("15/03/2021"),
+                VisitAt = DateTime.Parse("03/15/2021"),
                 Temperature = 35
             });
-            context.GuestLog.Add(new Models.GuestLog()
+            context.GuestLogs.Add(new Models.GuestLog()
             {
                 Id = Guid.NewGuid(),
                 GuestId = 159,
-                VisitAt = DateTime.Parse("10/03/2021"),
+                VisitAt = DateTime.Parse("03/10/2021"),
                 Temperature = 36
             });
-            context.GuestLog.Add(new Models.GuestLog()
+            context.GuestLogs.Add(new Models.GuestLog()
             {
                 Id = Guid.NewGuid(),
                 GuestId = 131,
-                VisitAt = DateTime.Parse("07/03/2021"),
+                VisitAt = DateTime.Parse("03/07/2021"),
                 Temperature = 37
             });
             context.SaveChanges();

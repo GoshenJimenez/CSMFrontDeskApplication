@@ -10,5 +10,7 @@
         <Button x:Name="btnBirthdays" Content="Birthdays" HorizontalAlignment="Left" Margin="37,50,0,0" VerticalAlignment="Top" Width="128" Height="21" Click="btnBirthdays_Click"/>
         <Button x:Name="btnStudentAssistants" Content="StudentAssistants" HorizontalAlignment="Left" Height="21" Margin="37,85,0,0" VerticalAlignment="Top" Width="128" Click="btnStudentAssistants_Click"/>
         <Button x:Name="btnStudentAssistantLog" Content="StudentAssistantsLogs" HorizontalAlignment="Left" Height="20" Margin="37,121,0,0" VerticalAlignment="Top" Width="128" Click="btnStudentAssistantLogs_Click"/>
+        <Button x:Name="btnGuestLog" Content="Guest Logs" HorizontalAlignment="Left" Height="23" Margin="37,170,0,0" VerticalAlignment="Top" Width="128" Click="btnGuestLog_Click"/>
+        <Button x:Name="btnGuest" Content="Guests" HorizontalAlignment="Left" Height="19" Margin="37,146,0,0" VerticalAlignment="Top" Width="128" Click="btnGuest_Click"/>
     </Grid>
 </Window>

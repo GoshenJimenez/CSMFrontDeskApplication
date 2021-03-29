@@ -47,5 +47,16 @@ namespace CSMFrontDeskApplication.Windows
             StudentAssistants.StudentAssistantLog studentassistantlogWindow = new StudentAssistants.StudentAssistantLog();
             studentassistantlogWindow.Show();
         }
+        private void btnGuestLog_Click(object sender, RoutedEventArgs e)
+        {
+            Guests.GuestLog guestlogWindow = new Guests.GuestLog();
+            guestlogWindow.Show();
+        }
+
+        private void btnGuest_Click(object sender, RoutedEventArgs e)
+        {
+            Guests.Guest guestWindow = new Guests.Guest();
+            guestWindow.Show();
+        }
     }
 }

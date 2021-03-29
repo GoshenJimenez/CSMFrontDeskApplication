@@ -11,8 +11,10 @@ namespace CSMFrontDeskApplication.Windows.Models
         public Guid? Id { get; set; }
         public int StudentAssistantId { get; set; }
         public DateTime Login { get; set; }
+        public DateTime Logout { get; set; }
         public int Hour
         {
+            
             get
             {
                 return this.Login.Hour;
@@ -33,28 +35,5 @@ namespace CSMFrontDeskApplication.Windows.Models
             }
         }
         
-        public DateTime Logout { get; set; }
-        public int Hours
-        {
-            get
-            {
-                return this.Logout.Hour;
-            }
-        }
-        public int Minutes
-        {
-            get
-            {
-                return this.Logout.Minute;
-            }
-        }
-        public int Seconds
-        {
-            get
-            {
-                return this.Logout.Second;
-            }
-        }
-
     }
 }

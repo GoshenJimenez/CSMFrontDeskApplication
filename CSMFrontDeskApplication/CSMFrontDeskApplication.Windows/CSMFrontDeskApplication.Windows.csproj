@@ -79,6 +79,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BLL\StudentAssistantBLL.cs" />
+    <Compile Include="BLL\StudentAssistantLogBLL.cs" />
     <Compile Include="FAQEntries\FAQEntry.xaml.cs">
       <DependentUpon>FAQEntry.xaml</DependentUpon>
     </Compile>

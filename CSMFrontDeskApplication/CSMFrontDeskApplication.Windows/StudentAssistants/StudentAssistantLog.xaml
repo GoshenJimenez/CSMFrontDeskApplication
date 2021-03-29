@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="StudentAssistantLog" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgStudentAssistantLogs" HorizontalAlignment="Left" Height="182" Margin="10,110,0,0" VerticalAlignment="Top" Width="772"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="29" Margin="27,326,0,0" VerticalAlignment="Top" Width="94"/>
+        <DataGrid x:Name="dgStudentAssistantLogs" HorizontalAlignment="Left" Height="334" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
 
     </Grid>
 </Window>

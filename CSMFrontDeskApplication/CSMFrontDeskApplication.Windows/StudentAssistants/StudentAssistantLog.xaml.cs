@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
         public StudentAssistantLog()
         {
             InitializeComponent();
+            var studentassistantlogs = StudentAssistantLogBLL.Search();
+            dgStudentAssistantLogs.ItemsSource = studentassistantlogs.Items;
         }
+
+        
     }
 }

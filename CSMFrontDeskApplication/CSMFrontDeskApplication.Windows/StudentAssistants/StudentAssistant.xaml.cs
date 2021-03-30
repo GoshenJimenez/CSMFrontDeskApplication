@@ -70,5 +70,10 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             pageIndex = pageCount;
             ShowData();
         }
+
+        private void dgStudentAssistants_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,5 +12,6 @@
         <Button x:Name="btnStudentAssistantLog" Content="StudentAssistantsLogs" HorizontalAlignment="Left" Height="20" Margin="37,121,0,0" VerticalAlignment="Top" Width="128" Click="btnStudentAssistantLogs_Click"/>
         <Button x:Name="btnGuestLog" Content="Guest Logs" HorizontalAlignment="Left" Height="23" Margin="37,170,0,0" VerticalAlignment="Top" Width="128" Click="btnGuestLog_Click"/>
         <Button x:Name="btnGuest" Content="Guests" HorizontalAlignment="Left" Height="19" Margin="37,146,0,0" VerticalAlignment="Top" Width="128" Click="btnGuest_Click"/>
+        <Button x:Name="btnFAQEntries" Content="FAQEntries" HorizontalAlignment="Left" Margin="37,198,0,0" VerticalAlignment="Top" Width="128" Height="22" Click="btnFAQEntries_Click"/>
     </Grid>
 </Window>

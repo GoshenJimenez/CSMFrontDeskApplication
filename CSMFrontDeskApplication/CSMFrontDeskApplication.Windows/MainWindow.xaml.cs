@@ -58,5 +58,11 @@ namespace CSMFrontDeskApplication.Windows
             Guests.Guest guestWindow = new Guests.Guest();
             guestWindow.Show();
         }
+
+        private void btnFAQEntries_Click(object sender, RoutedEventArgs e)
+        {
+            FAQEntries.FAQEntry faqentryWindow = new FAQEntries.FAQEntry();
+            faqentryWindow.Show();
+        }
     }
 }

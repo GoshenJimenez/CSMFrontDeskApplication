@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Title="FAQEntry" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgFAQEntries" HorizontalAlignment="Left" Height="166" Margin="10,70,0,0" VerticalAlignment="Top" Width="772"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Margin="10,263,0,0" Height="38"/>
+        <DataGrid x:Name="dgFAQEntries" HorizontalAlignment="Left" Height="268" Margin="10,35,0,0" VerticalAlignment="Top" Width="772"/>
+        <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="32,348,0,0" VerticalAlignment="Top" Width="40" Height="34" RenderTransformOrigin="-1.605,0.544" Click="btnFirst_Click"/>
+        <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="96,348,0,0" VerticalAlignment="Top" Width="40" Click="btnPrev_Click" Height="34" RenderTransformOrigin="-1.605,0.544"/>
+        <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="298,348,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnNext_Click"/>
+        <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="358,348,0,37" Width="40" Click="btnLast_Click"/>
+        <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="141,348,0,0" VerticalAlignment="Top" Width="152" Height="34"/>
 
     </Grid>
 </Window>

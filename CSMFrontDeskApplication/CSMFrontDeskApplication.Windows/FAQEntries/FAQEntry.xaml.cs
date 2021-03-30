@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,56 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
     /// </summary>
     public partial class FAQEntry : Window
     {
+        private long pageIndex = 1;
+        private long pageCount = 0;
         public FAQEntry()
         {
             InitializeComponent();
+            ShowData();
+        } 
+
+        private void ShowData() 
+        {
+            var faqentries = FAQEntryBLL.Search((int)pageIndex, 1);
+            dgFAQEntries.ItemsSource = faqentries.Items;
+            pageCount = faqentries.PageCount;
+            lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
         }
 
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex + 1;
 
+            if (pageIndex > pageCount)
+            {
+                pageIndex = pageCount;
+            }
+
+            ShowData();
+        }
+
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = 1;
+            ShowData();
+        }
+
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex - 1;
+
+            if (pageIndex < 1)
+            {
+                pageIndex = 1;
+            }
+
+            ShowData();
+        }
+
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageCount;
+            ShowData();
+        }
     }
 }

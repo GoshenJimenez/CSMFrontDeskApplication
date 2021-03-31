@@ -26,8 +26,6 @@ namespace CSMFrontDeskApplication.Windows
         public MainWindow()
         {
             InitializeComponent();
-
-
         }
 
         private void btnBirthdays_Click(object sender, RoutedEventArgs e)

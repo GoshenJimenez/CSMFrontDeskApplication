@@ -17,14 +17,13 @@ namespace CSMFrontDeskApplication.Windows.BLL
         {
             return db.StudentAssistants.ToList();
         }
-        public static Paged<StudentAssistant> Search(int pageIndex = 1, int pageSize = 10)
+        public static Paged<StudentAssistant> Search(int pageIndex = 1, int pageSize = 10, string keyword = "")
         {
-            var studentassistants = db.StudentAssistants;
+            var studentassistants = db.StudentAssistants.Where(s => s.PersonName.ToLower().Contains(keyword.ToLower()));
 
             return new Paged<StudentAssistant>()
             {
                 Items = studentassistants.OrderByDescending(s => s.Password).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToList(),
-                
                 RowCount = studentassistants.Count(),
                 PageIndex = pageIndex,
                 PageSize = pageSize,

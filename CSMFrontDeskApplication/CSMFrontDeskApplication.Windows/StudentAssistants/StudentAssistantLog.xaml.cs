@@ -29,7 +29,7 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
         }
         private void ShowData()
         {
-            var studentassistantlogs = StudentAssistantLogBLL.Search((int)pageIndex, 1);
+            var studentassistantlogs = StudentAssistantLogBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
             dgStudentAssistantLogs.ItemsSource = studentassistantlogs.Items;
             pageCount = studentassistantlogs.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
@@ -70,5 +70,14 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             pageIndex = pageCount;
             ShowData();
         }
+
+        private void txtSearchKeyword_OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ShowData();
+            }
+        }
+
     }
 }

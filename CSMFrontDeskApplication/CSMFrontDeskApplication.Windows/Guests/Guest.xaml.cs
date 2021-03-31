@@ -29,7 +29,7 @@ namespace CSMFrontDeskApplication.Windows.Guests
         }
         private void ShowData()
         {
-            var guests = GuestBLL.Search((int)pageIndex, 1);
+            var guests = GuestBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
             dgGuests.ItemsSource = guests.Items;
             pageCount = guests.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
@@ -69,6 +69,14 @@ namespace CSMFrontDeskApplication.Windows.Guests
         {
             pageIndex = pageCount;
             ShowData();
+        }
+
+        private void txtSearchKeyword_OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ShowData();
+            }
         }
     }
 }

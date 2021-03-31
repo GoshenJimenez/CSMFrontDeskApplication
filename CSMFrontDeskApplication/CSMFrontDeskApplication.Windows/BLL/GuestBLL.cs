@@ -17,9 +17,9 @@ namespace CSMFrontDeskApplication.Windows.BLL
         {
             return db.Guests.ToList();
         }
-        public static Paged<Guest> Search(int pageIndex = 1, int pageSize = 10)
+        public static Paged<Guest> Search(int pageIndex = 1, int pageSize = 10, string keyword = "")
         {
-            var guests = db.Guests;
+            var guests = db.Guests.Where(g => g.PersonName.ToLower().Contains(keyword.ToLower()));
 
             return new Paged<Guest >()
             {

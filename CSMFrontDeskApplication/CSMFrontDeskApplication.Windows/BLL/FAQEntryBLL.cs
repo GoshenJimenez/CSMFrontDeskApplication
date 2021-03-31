@@ -18,18 +18,18 @@ namespace CSMFrontDeskApplication.Windows.BLL
             return db.FAQEntries.ToList();
         }
 
-        public static Paged<FAQEntry> Search(int pageIndex = 1, int pageSize = 10) 
+        public static Paged<FAQEntry> Search(int pageIndex = 1, int pageSize = 10, string keyword = "")
         {
-            var faqentries = db.FAQEntries;
+            var faqentries = db.FAQEntries.Where(f => f.Question.ToLower().Contains(keyword.ToLower()));
 
             return new Paged<FAQEntry>()
             {
                 Items = faqentries.OrderByDescending(f => f.Answer).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToList(),
-
                 RowCount = faqentries.Count(),
                 PageIndex = pageIndex,
                 PageSize = pageSize,
             };
+
         }
     }
 }

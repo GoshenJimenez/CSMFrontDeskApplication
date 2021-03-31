@@ -26,11 +26,11 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
         {
             InitializeComponent();
             ShowData();
-        } 
+        }
 
-        private void ShowData() 
+        private void ShowData()
         {
-            var faqentries = FAQEntryBLL.Search((int)pageIndex, 1);
+            var faqentries = FAQEntryBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
             dgFAQEntries.ItemsSource = faqentries.Items;
             pageCount = faqentries.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
@@ -70,6 +70,14 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
         {
             pageIndex = pageCount;
             ShowData();
+        }
+
+        private void txtSearchKeyword_OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ShowData();
+            }
         }
     }
 }

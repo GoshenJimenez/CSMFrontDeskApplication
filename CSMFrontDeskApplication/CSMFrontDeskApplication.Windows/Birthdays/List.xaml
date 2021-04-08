@@ -15,6 +15,7 @@
         <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="148,374,0,0" VerticalAlignment="Top" Width="142"/>
         <TextBox x:Name="txtSearchKeyword" HorizontalAlignment="Left" Height="23" Margin="105,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237" KeyDown="txtSearchKeyword_OnKeyDownHandler" />
         <Label Content="Search" HorizontalAlignment="Left" Margin="43,32,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdd" Content="Add New Birthday" HorizontalAlignment="Left" Margin="618,32,0,0" VerticalAlignment="Top" Width="113" Height="34" Click="btnAdd_Click"/>
 
     </Grid>
 </Window>

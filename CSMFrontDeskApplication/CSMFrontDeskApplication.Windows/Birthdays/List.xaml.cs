@@ -28,9 +28,9 @@ namespace CSMFrontDeskApplication.Windows.Birthdays
             ShowData();
         }
 
-        private void ShowData()
+        public void ShowData()
         {
-            var bdays = BirthdayBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
+            var bdays = BirthdayBLL.Search((int)pageIndex, 10, txtSearchKeyword.Text);
             dgBirthdays.ItemsSource = bdays.Items;
             pageCount = bdays.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount; //Showing page 1 of 20
@@ -80,5 +80,10 @@ namespace CSMFrontDeskApplication.Windows.Birthdays
             }
         }
 
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Birthdays.Create createWindow = new Birthdays.Create(this);
+            createWindow.Show();
+        }
     }
 }

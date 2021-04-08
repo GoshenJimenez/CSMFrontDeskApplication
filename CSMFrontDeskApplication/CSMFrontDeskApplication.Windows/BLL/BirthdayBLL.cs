@@ -110,5 +110,29 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 PageSize = pageSize,                
             };
         }
+
+        public static Operation Create(Birthday model)
+        {
+            try
+            {
+                db.Birthdays.Add(model);
+                db.SaveChanges();
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "Birthday is created successfully." }
+                };
+
+            }
+            catch(Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+        }
     }
 }

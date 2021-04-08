@@ -79,6 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Birthdays\Create.xaml.cs">
+      <DependentUpon>Create.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BLL\FAQEntryBLL.cs" />
     <Compile Include="BLL\GuestBLL.cs" />
     <Compile Include="BLL\GuestLogBLL.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="Guests\GuestLog.xaml.cs">
       <DependentUpon>GuestLog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Operation.cs" />
     <Compile Include="Models\Enums\Gender.cs" />
     <Compile Include="StudentAssistants\StudentAssistant.xaml.cs">
       <DependentUpon>StudentAssistant.xaml</DependentUpon>
@@ -100,6 +104,10 @@
     <Compile Include="StudentAssistants\StudentAssistantLog.xaml.cs">
       <DependentUpon>StudentAssistantLog.xaml</DependentUpon>
     </Compile>
+    <Page Include="Birthdays\Create.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Birthdays\List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

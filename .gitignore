@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+/.vs
+/.vs/
+/CSMFrontDeskApplication/.vs
+/CSMFrontDeskApplication/.vs/
+/CSMFrontDeskApplication/CSMFrontDeskApplication.Windows/bin
+/CSMFrontDeskApplication/CSMFrontDeskApplication.Windows/bin/
+/CSMFrontDeskApplication/CSMFrontDeskApplication.Windows/obj
+/CSMFrontDeskApplication/CSMFrontDeskApplication.Windows/obj/

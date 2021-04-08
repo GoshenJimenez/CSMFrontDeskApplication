@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,63 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
     /// </summary>
     public partial class StudentAssistant : Window
     {
+        private long pageIndex = 1;
+        private long pageCount = 0;
         public StudentAssistant()
         {
             InitializeComponent();
+
+        }
+        private void ShowData()
+        {
+            var studentassistants = StudentAssistantBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
+            dgStudentAssistants.ItemsSource = studentassistants.Items;
+            pageCount = studentassistants.PageCount;
+            lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex + 1;
+
+            if (pageIndex > pageCount)
+            {
+                pageIndex = pageCount;
+            }
+
+            ShowData();
+        }
+
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = 1;
+            ShowData();
+        }
+
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex - 1;
+
+            if (pageIndex < 1)
+            {
+                pageIndex = 1;
+            }
+
+            ShowData();
+        }
+
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageCount;
+            ShowData();
+        }
+
+        private void txtSearchKeyword_OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ShowData();
+            }
         }
     }
 }

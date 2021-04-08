@@ -21,9 +21,9 @@ namespace CSMFrontDeskApplication.Windows.DAL
 
         public DbSet<StudentAssistantLog> StudentAssistantLogs { get; set; }
 
-        public DbSet<Guest> Guest { get; set; }
+        public DbSet<Guest> Guests { get; set; }
 
-        public DbSet<GuestLog> GuestLog { get; set; }
+        public DbSet<GuestLog> GuestLogs { get; set; }
 
         public DbSet<FAQEntry> FAQEntries { get; set; }
 

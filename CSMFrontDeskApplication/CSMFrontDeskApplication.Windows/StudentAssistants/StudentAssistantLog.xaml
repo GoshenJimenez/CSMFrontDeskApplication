@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="StudentAssistantLog" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgStudentAssistantLogs" HorizontalAlignment="Left" Height="182" Margin="10,110,0,0" VerticalAlignment="Top" Width="772"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Height="29" Margin="27,326,0,0" VerticalAlignment="Top" Width="94"/>
+        <DataGrid x:Name="dgStudentAssistantLogs" HorizontalAlignment="Left" Height="298" Margin="10,46,0,0" VerticalAlignment="Top" Width="772"/>
+        <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="30,362,0,0" VerticalAlignment="Top" Width="40" Height="34" RenderTransformOrigin="-1.605,0.544" Click="btnFirst_Click"/>
+        <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="88,362,0,0" VerticalAlignment="Top" Width="40" Click="btnPrev_Click" Height="34" RenderTransformOrigin="-1.605,0.544"/>
+        <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="308,362,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnNext_Click"/>
+        <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="367,362,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnLast_Click"/>
+        <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="148,370,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label Content="Search" HorizontalAlignment="Left" Height="36" Margin="10,10,0,0" VerticalAlignment="Top" Width="46"/>
+        <TextBox x:Name="txtSearchKeyword" HorizontalAlignment="Left" Height="24" Margin="61,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" KeyDown="txtSearchKeyword_OnKeyDownHandler"/>
 
     </Grid>
 </Window>

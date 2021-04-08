@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,63 @@ namespace CSMFrontDeskApplication.Windows.Guests
     /// </summary>
     public partial class Guest : Window
     {
+        private long pageIndex = 1;
+        private long pageCount = 0;
         public Guest()
         {
             InitializeComponent();
+            ShowData();
+        }
+        private void ShowData()
+        {
+            var guests = GuestBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
+            dgGuests.ItemsSource = guests.Items;
+            pageCount = guests.PageCount;
+            lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex + 1;
+
+            if (pageIndex > pageCount)
+            {
+                pageIndex = pageCount;
+            }
+
+            ShowData();
+        }
+
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = 1;
+            ShowData();
+        }
+
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageIndex - 1;
+
+            if (pageIndex < 1)
+            {
+                pageIndex = 1;
+            }
+
+            ShowData();
+        }
+
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            pageIndex = pageCount;
+            ShowData();
+        }
+
+        private void txtSearchKeyword_OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ShowData();
+            }
         }
     }
 }

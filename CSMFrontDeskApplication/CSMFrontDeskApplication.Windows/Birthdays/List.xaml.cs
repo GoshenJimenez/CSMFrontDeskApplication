@@ -1,4 +1,5 @@
 ﻿using CSMFrontDeskApplication.Windows.BLL;
+using CSMFrontDeskApplication.Windows.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,13 @@ namespace CSMFrontDeskApplication.Windows.Birthdays
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount; //Showing page 1 of 20
         }
 
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Birthday birthday = ((FrameworkElement)sender).DataContext as Birthday;
+            Update updateWindow = new Update(birthday, this);
+            updateWindow.Show();
+        }
+            
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             pageIndex = pageIndex + 1;

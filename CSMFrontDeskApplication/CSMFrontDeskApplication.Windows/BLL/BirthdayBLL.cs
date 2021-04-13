@@ -134,5 +134,40 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 };
             }
         }
+
+        public static Operation Update(Birthday model)
+        {
+            try
+            {
+                Birthday birthdayRecord = db.Birthdays.FirstOrDefault(b => b.Id == model.Id);
+
+                if (birthdayRecord != null)
+                {
+                    birthdayRecord.PersonName = model.PersonName;
+                    birthdayRecord.Date = model.Date;
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "Ok",
+                        Message = new List<string>() { "Birthday is updated successfully." }
+                    };
+                }
+
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { "Birthday record not found."}
+                };
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+        }
     }
 }

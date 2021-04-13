@@ -190,3 +190,17 @@ C:\Users\Nicole\Documents\Major\CSMFRONTDESK\CSMFrontDeskApplication\CSMFrontDes
 C:\Users\Nicole\Documents\Major\CSMFRONTDESK\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.csproj.CopyComplete
 C:\Users\Nicole\Documents\Major\CSMFRONTDESK\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.exe
 C:\Users\Nicole\Documents\Major\CSMFRONTDESK\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.pdb
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Create.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\FAQEntry.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Guest.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\GuestLog.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistant.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistantLog.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Create.baml
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\FAQEntry.baml
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Guest.baml
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\GuestLog.baml
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistant.baml
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistantLog.baml
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.g.cs
+C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.baml

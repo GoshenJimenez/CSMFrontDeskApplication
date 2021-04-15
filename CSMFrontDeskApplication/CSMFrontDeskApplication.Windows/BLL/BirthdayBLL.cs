@@ -169,5 +169,39 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 };
             }
         }
+
+        public static Operation Delete(Birthday model)
+        {
+            try
+            {
+                Birthday birthdayRecord = db.Birthdays.FirstOrDefault(b => b.Id == model.Id);
+
+                if (birthdayRecord != null)
+                {
+                    db.Birthdays.Remove(birthdayRecord);
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "Ok",
+                        Message = new List<string>() { "Birthday is deleted successfully." }
+                    };
+                }
+
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { "Birthday record not found." }
+                };
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+        }
     }
 }

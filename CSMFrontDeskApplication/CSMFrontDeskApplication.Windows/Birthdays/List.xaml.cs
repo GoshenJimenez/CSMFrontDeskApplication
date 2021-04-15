@@ -43,7 +43,29 @@ namespace CSMFrontDeskApplication.Windows.Birthdays
             Update updateWindow = new Update(birthday, this);
             updateWindow.Show();
         }
-            
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Birthday birthday = ((FrameworkElement)sender).DataContext as Birthday;
+            if(MessageBox.Show("Do you want to delete birthday entry for " 
+                            + birthday.PersonName + " on " 
+                            + birthday.Date.ToString("dd/MM/yyyy") + " ?", "Are you sure?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                var op = BirthdayBLL.Delete(birthday);
+
+                if (op.Code.ToLower() == "ok")
+                {
+                    ShowData();
+                    MessageBox.Show(op.Message.FirstOrDefault());
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(op.Message.FirstOrDefault());
+                }
+            }
+        }
+
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             pageIndex = pageIndex + 1;

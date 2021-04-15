@@ -13,5 +13,7 @@
         <Button x:Name="btnGuestLog" Content="Guest Logs" HorizontalAlignment="Left" Height="23" Margin="37,170,0,0" VerticalAlignment="Top" Width="128" Click="btnGuestLog_Click"/>
         <Button x:Name="btnGuest" Content="Guests" HorizontalAlignment="Left" Height="19" Margin="37,146,0,0" VerticalAlignment="Top" Width="128" Click="btnGuest_Click"/>
         <Button x:Name="btnFAQEntries" Content="FAQEntries" HorizontalAlignment="Left" Margin="37,198,0,0" VerticalAlignment="Top" Width="128" Height="22" Click="btnFAQEntries_Click"/>
+        <ListBox x:Name="lstBirthdays" HorizontalAlignment="Left" Height="155" Margin="684,65,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Happy Birthday!!" HorizontalAlignment="Left" Margin="684,37,0,0" VerticalAlignment="Top" Width="100" Height="28"/>
     </Grid>
 </Window>

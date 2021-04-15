@@ -88,6 +88,14 @@ namespace CSMFrontDeskApplication.Windows {
         #line default
         #line hidden
         
+        
+        #line 16 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.ListBox lstBirthdays;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -171,6 +179,9 @@ namespace CSMFrontDeskApplication.Windows {
             
             #line default
             #line hidden
+            return;
+            case 7:
+            this.lstBirthdays = ((System.Windows.Controls.ListBox)(target));
             return;
             }
             this._contentLoaded = true;

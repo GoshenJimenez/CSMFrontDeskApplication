@@ -26,6 +26,17 @@ namespace CSMFrontDeskApplication.Windows
         public MainWindow()
         {
             InitializeComponent();
+            ShowBirthdays();
+        }
+
+        private void ShowBirthdays()
+        {
+            var birthdays = BirthdayBLL.CelebrantsToday();
+            
+            foreach(var birthday in birthdays.Items)
+            {
+                lstBirthdays.Items.Add(birthday.PersonName);
+            }            
         }
 
         private void btnBirthdays_Click(object sender, RoutedEventArgs e)

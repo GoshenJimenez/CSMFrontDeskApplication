@@ -206,5 +206,25 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 };
             }
         }
+
+        public static Paged<Birthday> CelebrantsToday(int pageIndex = 1, int pageSize = 10)
+        {
+            var query = db.Birthdays.AsQueryable();
+            var birthdays = query.Where(b => 
+                                            b.Status == Models.Enums.RecordStatus.Active
+                                            && b.Date.Year == DateTime.Now.Year
+                                            && b.Date.Month == DateTime.Now.Month
+                                            && b.Date.Day == DateTime.Now.Day
+                                        )
+                .OrderByDescending(b => b.Date).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToList();
+
+            return new Paged<Birthday>()
+            {
+                Items = birthdays,
+                RowCount = birthdays.Count(),
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+            };
+        }
     }
 }

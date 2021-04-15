@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace CSMFrontDeskApplication.Windows.Models
         public Guid? Id { get; set; }
         public string PersonName { get; set; }
         public DateTime Date { get; set; }
+        public RecordStatus Status { get; set; }
         public int Month
         {
             get

@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Infrastructure\Operation.cs" />
     <Compile Include="Models\Enums\Gender.cs" />
+    <Compile Include="Models\Enums\RecordStatus.cs" />
     <Compile Include="StudentAssistants\StudentAssistant.xaml.cs">
       <DependentUpon>StudentAssistant.xaml</DependentUpon>
     </Compile>

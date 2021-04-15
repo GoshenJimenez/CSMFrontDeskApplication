@@ -91,7 +91,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 query = query.Where(b => b.PersonName.ToLower().Contains(keyword.ToLower()));                
             }
 
-            var birthdays = query.OrderByDescending(b => b.Date).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToList();
+            var birthdays = query.Where(b => b.Status == Models.Enums.RecordStatus.Active).OrderByDescending(b => b.Date).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToList();            
 
             if (!string.IsNullOrEmpty(keyword))
             {
@@ -115,6 +115,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
         {
             try
             {
+                model.Status = Models.Enums.RecordStatus.Active;
                 db.Birthdays.Add(model);
                 db.SaveChanges();
 
@@ -143,6 +144,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
 
                 if (birthdayRecord != null)
                 {
+                    birthdayRecord.Status = Models.Enums.RecordStatus.Active;
                     birthdayRecord.PersonName = model.PersonName;
                     birthdayRecord.Date = model.Date;
                     db.SaveChanges();
@@ -178,7 +180,8 @@ namespace CSMFrontDeskApplication.Windows.BLL
 
                 if (birthdayRecord != null)
                 {
-                    db.Birthdays.Remove(birthdayRecord);
+                    birthdayRecord.Status = Models.Enums.RecordStatus.Inactive;
+                    //db.Birthdays.Remove(birthdayRecord);
                     db.SaveChanges();
 
                     return new Operation()

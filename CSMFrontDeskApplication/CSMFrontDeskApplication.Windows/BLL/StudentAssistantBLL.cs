@@ -31,6 +31,31 @@ namespace CSMFrontDeskApplication.Windows.BLL
             
         }
 
+        public static Operation Create(StudentAssistant model)
+        {
+            try
+            {
+                db.StudentAssistants.Add(model);
+                db.SaveChanges();
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "Student Assistant is created successfully." }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+
+        }
+
         public static Operation Login(string userName, string password)
         {
             var studentAssistant = db.StudentAssistants.FirstOrDefault(s => s.Username == userName);
@@ -70,7 +95,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
                     return new Operation()
                     {
                         Code = "OK",
-                        Message = new List<string>() { "Successfully Loggedin" }
+                        Message = new List<string>() { "Successfully Logged in" }
                     };
                 }
                 else

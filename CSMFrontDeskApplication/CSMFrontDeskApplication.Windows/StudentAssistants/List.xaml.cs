@@ -30,9 +30,9 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
         }
 
 
-        private void ShowData()
+        public void ShowData()
         {
-            var studentassistants = StudentAssistantBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
+            var studentassistants = StudentAssistantBLL.Search((int)pageIndex, 10, txtSearchKeyword.Text);
             dgStudentAssistants.ItemsSource = studentassistants.Items;
             pageCount = studentassistants.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
@@ -82,5 +82,10 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             }
         }
 
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            StudentAssistants.Create createWindow = new StudentAssistants.Create(this);
+            createWindow.Show();
+        }
     }
 }

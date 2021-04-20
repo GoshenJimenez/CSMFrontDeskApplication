@@ -211,3 +211,8 @@ C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskA
 C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
 C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Login.g.cs
 C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Login.baml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Create.g.cs
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Login.g.cs
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Create.baml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Login.baml

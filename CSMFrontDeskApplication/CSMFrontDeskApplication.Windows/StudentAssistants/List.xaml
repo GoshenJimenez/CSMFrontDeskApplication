@@ -15,7 +15,7 @@
         <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="358,348,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnLast_Click"/>
         <Label Content="Search" HorizontalAlignment="Left" Height="25" Margin="16,24,0,0" VerticalAlignment="Top" Width="45"/>
         <TextBox x:Name="txtSearchKeyword" HorizontalAlignment="Left" Height="25" Margin="75,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" KeyDown="txtSearchKeyword_OnKeyDownHandler"/>
-        <Button x:Name="btnAdd" Content="Add New Student Assistant" HorizontalAlignment="Left" Height="25" Margin="622,24,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="btnAdd" Content="Add New Student Assistant" HorizontalAlignment="Left" Height="25" Margin="622,24,0,0" VerticalAlignment="Top" Width="160" Click="btnAdd_Click"/>
 
     </Grid>
 </Window>

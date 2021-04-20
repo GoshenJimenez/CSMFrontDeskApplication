@@ -47,7 +47,7 @@ namespace CSMFrontDeskApplication.Windows
 
         private void btnStudentAssistants_Click(object sender, RoutedEventArgs e)
         {
-            StudentAssistants.StudentAssistant studentassistantWindow = new StudentAssistants.StudentAssistant();
+            StudentAssistants.List studentassistantWindow = new StudentAssistants.List();
             studentassistantWindow.Show();
         }
 

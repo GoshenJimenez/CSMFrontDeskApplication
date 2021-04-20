@@ -16,17 +16,19 @@ using System.Windows.Shapes;
 namespace CSMFrontDeskApplication.Windows.StudentAssistants
 {
     /// <summary>
-    /// Interaction logic for StudentAssistant.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class StudentAssistant : Window
+    public partial class List : Window
     {
         private long pageIndex = 1;
         private long pageCount = 0;
-        public StudentAssistant()
+
+        public List()
         {
             InitializeComponent();
-
         }
+
+
         private void ShowData()
         {
             var studentassistants = StudentAssistantBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
@@ -78,5 +80,6 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
                 ShowData();
             }
         }
+
     }
 }

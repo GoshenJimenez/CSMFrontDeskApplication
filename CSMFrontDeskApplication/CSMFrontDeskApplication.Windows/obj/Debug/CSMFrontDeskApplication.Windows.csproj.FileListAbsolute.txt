@@ -88,7 +88,6 @@ C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontD
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Guest.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\GuestLog.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\MainWindow.g.cs
-C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistant.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistantLog.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\App.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows_MarkupCompile.cache
@@ -111,7 +110,6 @@ C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontD
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Guest.baml
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\GuestLog.baml
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\MainWindow.baml
-C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistant.baml
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistantLog.baml
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.g.resources
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.Properties.Resources.resources
@@ -204,3 +202,9 @@ C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskA
 C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\StudentAssistantLog.baml
 C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.g.cs
 C:\Users\goshe\OneDrive\Documents\Personal\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.baml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Create.g.cs
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.g.cs
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\List.g.cs
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Create.baml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.baml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\List.baml

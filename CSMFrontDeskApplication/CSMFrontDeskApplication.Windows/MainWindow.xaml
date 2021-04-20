@@ -16,5 +16,6 @@
         <ListBox x:Name="lstBirthdays" HorizontalAlignment="Left" Height="155" Margin="684,65,0,0" VerticalAlignment="Top" Width="100"/>
         <Label Content="Happy Birthday!!" HorizontalAlignment="Left" Margin="684,37,0,0" VerticalAlignment="Top" Width="100" Height="28"/>
         <Menu x:Name="mnu" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0"/>
+        <Button x:Name="btnSALogin" Content="SA Login" HorizontalAlignment="Left" Margin="37,225,0,0" VerticalAlignment="Top" Width="128" Height="22" Click="btnSALogin_Click"/>
     </Grid>
 </Window>

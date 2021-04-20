@@ -19,7 +19,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
         }
         public static Paged<StudentAssistantLog> Search(int pageIndex = 1, int pageSize = 10, string keyword = "")
         {
-            var studentassistantlogs = db.StudentAssistantLogs.Where(s => s.StudentAssistantId.ToString().Contains(keyword.ToLower()));
+            var studentassistantlogs = db.StudentAssistantLogs.Include("StudentAssistant").Where(s => s.StudentAssistant.PersonName.ToString().Contains(keyword.ToLower()));
 
             return new Paged<StudentAssistantLog>()
             {

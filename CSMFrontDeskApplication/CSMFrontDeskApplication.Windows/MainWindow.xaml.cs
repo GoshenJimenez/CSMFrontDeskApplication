@@ -73,5 +73,11 @@ namespace CSMFrontDeskApplication.Windows
             FAQEntries.FAQEntry faqentryWindow = new FAQEntries.FAQEntry();
             faqentryWindow.Show();
         }
+
+        private void btnSALogin_Click(object sender, RoutedEventArgs e)
+        {
+            StudentAssistants.Login loginWindow = new StudentAssistants.Login();
+            loginWindow.Show();
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
         public List()
         {
             InitializeComponent();
+            ShowData();
         }
 
 

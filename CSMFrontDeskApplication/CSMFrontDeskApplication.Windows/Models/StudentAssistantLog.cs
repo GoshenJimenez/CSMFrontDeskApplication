@@ -9,31 +9,10 @@ namespace CSMFrontDeskApplication.Windows.Models
     public class StudentAssistantLog
     {
         public Guid? Id { get; set; }
-        public int StudentAssistantId { get; set; }
+        public Guid? StudentAssistantId { get; set; }
+        public StudentAssistant StudentAssistant { get; set; }
         public DateTime Login { get; set; }
-        public DateTime Logout { get; set; }
-        public int Hour
-        {
-            
-            get
-            {
-                return this.Login.Hour;
-            }
-        }
-        public int Minute
-        {
-            get
-            {
-                return this.Login.Minute;
-            }
-        }
-        public int Second
-        {
-            get
-            {
-                return this.Login.Second;
-            }
-        }
+        public DateTime? Logout { get; set; }
         
     }
 }

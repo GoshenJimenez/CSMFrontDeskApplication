@@ -12,7 +12,7 @@ namespace CSMFrontDeskApplication.Windows.DAL
     {
         public SchoolDBContext() : base("myConnectionString")
         {
-            //Database.SetInitializer(new CSMFrontDeskApplication.Windows.DAL.DataInitializer());
+            Database.SetInitializer(new CSMFrontDeskApplication.Windows.DAL.DataInitializer());
         }
 
         public DbSet<Birthday> Birthdays { get; set; }

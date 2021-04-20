@@ -79,5 +79,10 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             }
         }
 
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            StudentAssistants.Login loginWindow = new StudentAssistants.Login(this);
+            loginWindow.Show();
+        }
     }
 }

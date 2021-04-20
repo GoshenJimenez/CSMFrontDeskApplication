@@ -30,5 +30,58 @@ namespace CSMFrontDeskApplication.Windows.BLL
             };
             
         }
+
+        public static Operation Login(string userName, string password)
+        {
+            var studentAssistant = db.StudentAssistants.FirstOrDefault(s => s.Username == userName);
+
+            if(studentAssistant == null)
+            {
+                return new Operation()
+                {
+                    Code = "400",
+                    Message = new List<string>() { "Invalid Login" }
+                };
+            }
+            else
+            {
+                var result = DevOne.Security.Cryptography.BCrypt.BCryptHelper.CheckPassword(password, studentAssistant.Password);
+
+                if(result == true)
+                {
+                    var log = db.StudentAssistantLogs.FirstOrDefault(l => l.StudentAssistantId == studentAssistant.Id
+                                                                        && l.Login.Year == DateTime.Now.Year
+                                                                        && l.Login.Month == DateTime.Now.Month
+                                                                        && l.Login.Day == DateTime.Now.Day
+                                                                     );
+                    if(log == null)
+                    {
+                        log = new StudentAssistantLog()
+                        {
+                            Id = Guid.NewGuid(),
+                            StudentAssistantId = studentAssistant.Id,
+                            Login = DateTime.Now,
+                        };
+
+                        db.StudentAssistantLogs.Add(log);
+                        db.SaveChanges();
+                    }
+
+                    return new Operation()
+                    {
+                        Code = "OK",
+                        Message = new List<string>() { "Successfully Loggedin" }
+                    };
+                }
+                else
+                {
+                    return new Operation()
+                    {
+                        Code = "400",
+                        Message = new List<string>() { "Invalid Login" }
+                    };
+                }
+            }
+        }
     }
 }

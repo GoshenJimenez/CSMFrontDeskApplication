@@ -18,17 +18,18 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
     /// <summary>
     /// Interaction logic for FAQEntry.xaml
     /// </summary>
-    public partial class FAQEntry : Window
+    public partial class List : Window
     {
         private long pageIndex = 1;
         private long pageCount = 0;
-        public FAQEntry()
+
+        public List()
         {
             InitializeComponent();
             ShowData();
         }
 
-        private void ShowData()
+        public void ShowData()
         {
             var faqentries = FAQEntryBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
             dgFAQEntries.ItemsSource = faqentries.Items;
@@ -78,6 +79,12 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
             {
                 ShowData();
             }
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            FAQEntries.Create createWindow = new FAQEntries.Create(this);
+            createWindow.Show();
         }
     }
 }

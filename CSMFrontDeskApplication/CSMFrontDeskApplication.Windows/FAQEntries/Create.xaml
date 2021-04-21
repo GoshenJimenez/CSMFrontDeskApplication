@@ -1,0 +1,20 @@
+﻿<Window x:Class="CSMFrontDeskApplication.Windows.FAQEntries.Create"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSMFrontDeskApplication.Windows.FAQEntries"
+        mc:Ignorable="d"
+       Title="Create New Question" Height="343.515" Width="455.996">
+    <Grid>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="280,239,0,0" VerticalAlignment="Top" Width="95" Height="29" Click="btnSave_Click" FontFamily="Segoe UI Black" FontSize="14" Background="#FFF1C910"/>
+        <Label Content="Create new Question Entry" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="365" Height="38" FontSize="24" Background="#FFF0B12B" FontFamily="Century Gothic"/>
+        <TextBlock Margin="15,64,73,0" TextWrapping="Wrap" Text="Type in a new Question Entry for the FAQEntries Section  of the welcome screen." VerticalAlignment="Top" Height="45" Background="#FFFFE39A" FontFamily="Times New Roman" FontSize="18" FontStyle="Italic"/>
+        <Label x:Name="lblQuestion" Content="Question" HorizontalAlignment="Left" Margin="15,125,0,0" VerticalAlignment="Top" Width="89" Background="#FFEA4E05" Height="37" FontFamily="Comic Sans MS" FontSize="16"/>
+        <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="32" Margin="109,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="319"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="160,239,0,0" VerticalAlignment="Top" Width="95" Height="29" FontFamily="Segoe UI Black" FontSize="14" Background="#FFF0C400"/>
+        <Label x:Name="lblAnswer" Content="Answer" HorizontalAlignment="Left" Margin="15,178,0,0" VerticalAlignment="Top" Width="89" Background="#FFEA4E05" Height="37" FontFamily="Comic Sans MS" FontSize="16"/>
+        <TextBox x:Name="txtAnswer" HorizontalAlignment="Left" Height="32" Margin="109,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="319"/>
+
+    </Grid>
+</Window>

@@ -31,5 +31,36 @@ namespace CSMFrontDeskApplication.Windows.BLL
             };
 
         }
+
+        public static Operation Create(FAQEntry model)
+        {
+            try
+            {
+                db.FAQEntries.Add(model);
+                db.SaveChanges();
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "Question is created successfully." }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+
+        }
+
+        
+                        
+      
+     
+     
     }
 }

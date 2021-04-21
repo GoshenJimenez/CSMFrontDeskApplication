@@ -70,7 +70,7 @@ namespace CSMFrontDeskApplication.Windows
 
         private void btnFAQEntries_Click(object sender, RoutedEventArgs e)
         {
-            FAQEntries.FAQEntry faqentryWindow = new FAQEntries.FAQEntry();
+            FAQEntries.List faqentryWindow = new FAQEntries.List();
             faqentryWindow.Show();
         }
 

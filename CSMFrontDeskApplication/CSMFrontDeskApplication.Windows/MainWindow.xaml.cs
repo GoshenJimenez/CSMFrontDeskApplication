@@ -64,7 +64,7 @@ namespace CSMFrontDeskApplication.Windows
 
         private void btnGuest_Click(object sender, RoutedEventArgs e)
         {
-            Guests.Guest guestWindow = new Guests.Guest();
+            Guests.List guestWindow = new Guests.List();
             guestWindow.Show();
         }
 

@@ -18,16 +18,16 @@ namespace CSMFrontDeskApplication.Windows.Guests
     /// <summary>
     /// Interaction logic for Guest.xaml
     /// </summary>
-    public partial class Guest : Window
+    public partial class List : Window
     {
         private long pageIndex = 1;
         private long pageCount = 0;
-        public Guest()
+        public List()
         {
             InitializeComponent();
             ShowData();
         }
-        private void ShowData()
+        public void ShowData()
         {
             var guests = GuestBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
             dgGuests.ItemsSource = guests.Items;
@@ -77,6 +77,12 @@ namespace CSMFrontDeskApplication.Windows.Guests
             {
                 ShowData();
             }
+        }
+
+        private void btnClick_Click(object sender, RoutedEventArgs e)
+        {
+            Guests.Create createWindow = new Guests.Create(this);
+            createWindow.Show();
         }
     }
 }

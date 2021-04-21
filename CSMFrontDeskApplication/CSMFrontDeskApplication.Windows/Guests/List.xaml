@@ -1,4 +1,4 @@
-﻿<Window x:Class="CSMFrontDeskApplication.Windows.Guests.Guest"
+﻿<Window x:Class="CSMFrontDeskApplication.Windows.Guests.List"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -15,6 +15,7 @@
         <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="147,350,0,0" VerticalAlignment="Top" Width="142"/>
         <Label Content="Search" HorizontalAlignment="Left" Height="39" Margin="10,9,0,0" VerticalAlignment="Top" Width="56"/>
         <TextBox x:Name="txtSearchKeyword" HorizontalAlignment="Left" Height="38" Margin="71,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" KeyDown="txtSearchKeyword_OnKeyDownHandler"/>
+        <Button x:Name="btnClick" Content="Add New Guest" HorizontalAlignment="Left" Height="37" Margin="611,9,0,0" VerticalAlignment="Top" Width="171" Click="btnClick_Click"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="CSMFrontDeskApplication.Windows.Guests.CreateG"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSMFrontDeskApplication.Windows.Guests"
+        mc:Ignorable="d"
+        Title="Create New Guest Entry" Height="377" Width="431">
+    <Grid HorizontalAlignment="Left" Width="790">
+        <Label Content="Create new Guest Entry" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="365" Height="38" FontSize="22" FontFamily="Californian FB"/>
+        <TextBlock Margin="10,48,380,0" TextWrapping="Wrap" Text="Type in a new Guest Entry for the Guest section of the Welcome screen." VerticalAlignment="Top" Height="38" FontFamily="Californian FB"/>
+        <Label x:Name="lblPersonName" Content="Person Name" HorizontalAlignment="Left" Height="39" Margin="10,96,0,0" VerticalAlignment="Top" Width="110" FontFamily="Gabriola" FontSize="18"/>
+        <TextBox x:Name="txtPersonName" HorizontalAlignment="Left" Height="39" Margin="125,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253"/>
+        <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Height="39" Margin="10,140,0,0" VerticalAlignment="Top" Width="110" FontFamily="Gabriola" FontSize="18"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="39" Margin="125,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253"/>
+        <Label x:Name="lblAge" Content="Age" HorizontalAlignment="Left" Height="39" Margin="10,184,0,0" VerticalAlignment="Top" Width="110" FontFamily="Gabriola" FontSize="18"/>
+        <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="39" Margin="125,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253"/>
+        <Label x:Name="lblGender" Content="Gender" HorizontalAlignment="Left" Height="39" Margin="10,228,0,0" VerticalAlignment="Top" Width="110" FontFamily="Gabriola" FontSize="18"/>
+        <ComboBox x:Name="cboGender" HorizontalAlignment="Left" Height="39" Margin="125,228,0,0" VerticalAlignment="Top" Width="253"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Height="37" Margin="125,286,0,0" VerticalAlignment="Top" Width="118"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="37" Margin="264,286,0,0" VerticalAlignment="Top" Width="111" Click="btnSave_Click"/>
+    </Grid>
+</Window>

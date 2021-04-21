@@ -10,7 +10,7 @@ namespace CSMFrontDeskApplication.Windows.Models
     {
         public Guid? Id { get; set; }
         public int GuestId { get; set; }
-        public int Temperature { get; set; }
+        public string Temperature { get; set; }
         public DateTime VisitAt { get; set; }
         public int Month
         {

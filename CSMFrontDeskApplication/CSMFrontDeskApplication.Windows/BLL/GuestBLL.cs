@@ -30,5 +30,28 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 PageSize = pageSize,
             };
         }
+        public static Operation Create(Guest model)
+        {
+            try
+            {
+                db.Guests.Add(model);
+                db.SaveChanges();
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "Guest is created successfully." }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+        }
     }
 }

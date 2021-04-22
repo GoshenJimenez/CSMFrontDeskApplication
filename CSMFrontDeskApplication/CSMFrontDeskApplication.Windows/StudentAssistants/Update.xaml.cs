@@ -17,20 +17,26 @@ using System.Windows.Shapes;
 namespace CSMFrontDeskApplication.Windows.StudentAssistants
 {
     /// <summary>
-    /// Interaction logic for Create.xaml
+    /// Interaction logic for Update.xaml
     /// </summary>
-    public partial class Create : Window
+    public partial class Update : Window
     {
         private StudentAssistants.List listWindow;
-        public Create(StudentAssistants.List parentWindow)
+        private StudentAssistant assistant;
+        public Update(StudentAssistant studentassistant, StudentAssistants.List parentWindow)
         {
             InitializeComponent();
             listWindow = parentWindow;
+            assistant = studentassistant;
+
+            txtPersonName.Text = assistant.PersonName;
+            txtCourse.Text = assistant.Course;
+            txtUsername.Text = assistant.Username;
+            txtPassword.Text = assistant.Password;
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
             if (string.IsNullOrEmpty(txtPersonName.Text))
             {
                 MessageBox.Show("Please Enter A Person's Name for the Student Assistant Entry");
@@ -56,14 +62,13 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             };
 
 
-            StudentAssistant assistant = new StudentAssistant();
+           
             assistant.PersonName = txtPersonName.Text;
             assistant.Course = txtCourse.Text;
             assistant.Username = txtUsername.Text;
             assistant.Password = txtPassword.Text;
-            assistant.Id = Guid.NewGuid();
-
-            var op = StudentAssistantBLL.Create(assistant);
+           
+            var op = StudentAssistantBLL.Update(assistant);
 
             if (op.Code.ToLower() == "ok")
             {
@@ -75,6 +80,7 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             {
                 MessageBox.Show(op.Message.FirstOrDefault());
             }
+            
         }
     }
 }

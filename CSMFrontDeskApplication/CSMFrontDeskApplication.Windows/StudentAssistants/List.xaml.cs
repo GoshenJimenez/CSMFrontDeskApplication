@@ -1,4 +1,5 @@
 ﻿using CSMFrontDeskApplication.Windows.BLL;
+using CSMFrontDeskApplication.Windows.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,13 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             dgStudentAssistants.ItemsSource = studentassistants.Items;
             pageCount = studentassistants.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            StudentAssistant studentassistant = ((FrameworkElement)sender).DataContext as StudentAssistant;
+            Update updateWindow = new Update(studentassistant, this);
+            updateWindow.Show();
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)

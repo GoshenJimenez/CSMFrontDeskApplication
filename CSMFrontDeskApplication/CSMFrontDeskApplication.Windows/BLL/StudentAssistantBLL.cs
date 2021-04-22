@@ -108,5 +108,45 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 }
             }
         }
+
+        public static Operation Update(StudentAssistant model)
+        {
+            try
+            {
+                StudentAssistant studentassistantRecord = db.StudentAssistants.FirstOrDefault(s => s.Id == model.Id);
+
+                if (studentassistantRecord != null)
+                {
+
+                    studentassistantRecord.PersonName = model.PersonName;
+                    studentassistantRecord.Course = model.Course;
+                    studentassistantRecord.Username = model.Username;
+                    studentassistantRecord.Password = model.Password;
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "Ok",
+                        Message = new List<string>() { " Student Assistant is updated successfully." }
+                    };
+                }
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "Student Assistant Record not Found" }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+
+        }
     }
 }

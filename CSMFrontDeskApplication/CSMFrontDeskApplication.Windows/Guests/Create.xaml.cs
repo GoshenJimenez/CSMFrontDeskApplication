@@ -62,13 +62,18 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 gender = Gender.Female;
             };
 
-
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtAge.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtAge.Text = txtAge.Text.Remove(txtAge.Text.Length - 1);
+                return;
+            }
+            
             Guest guest = new Guest();
             guest.PersonName = txtPersonName.Text;
             guest.Address = txtAddress.Text;
             guest.Gender = gender;
             guest.Id = Guid.NewGuid();
-
             var op = GuestBLL.Create(guest);
 
             if (op.Code.ToLower() == "ok")

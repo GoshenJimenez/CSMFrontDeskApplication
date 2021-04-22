@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace CSMFrontDeskApplication.Windows.Models
         public string AnnouncedBy { get; set; }
 
         public DateTime StartDate { get; set; }
+
+        public RecordStatus Status { get; set; }
 
         public int Month
         {

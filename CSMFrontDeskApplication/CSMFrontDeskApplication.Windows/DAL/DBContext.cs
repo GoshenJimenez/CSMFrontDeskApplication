@@ -15,6 +15,8 @@ namespace CSMFrontDeskApplication.Windows.DAL
             Database.SetInitializer(new CSMFrontDeskApplication.Windows.DAL.DataInitializer());
         }
 
+
+        public DbSet<Announcement> Announcements { get; set; }
         public DbSet<Birthday> Birthdays { get; set; }
 
         public DbSet<StudentAssistant> StudentAssistants { get; set; }

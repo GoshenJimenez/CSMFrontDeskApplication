@@ -30,11 +30,37 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 PageSize = pageSize,
             };
         }
-        public static Operation Create(Guest model)
+        public static Operation Login(GuestLoginViewModel model)
         {
             try
             {
-                db.Guests.Add(model);
+                Guest guest = db.Guests.FirstOrDefault(g => g.PersonName.ToLower() == model.PersonName.ToLower() && g.Gender == model.Gender);
+
+                Guid? guestId = Guid.NewGuid();
+                if (guest == null)
+                { 
+                    db.Guests.Add(new Guest()
+                    {
+                        Id = guestId,
+                        Address = model.Address,
+                        Age = model.Age,
+                        Gender = model.Gender,
+                        PersonName = model.PersonName
+                    });
+                }
+                else
+                {
+                    guestId = guest.Id;
+                }
+
+                db.GuestLogs.Add(new GuestLog()
+                {
+                    Id = Guid.NewGuid(),
+                    GuestId = guestId,
+                    Temperature = model.Temperature,
+                    VisitAt = DateTime.Now
+                });
+
                 db.SaveChanges();
 
                 return new Operation()
@@ -53,5 +79,10 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 };
             }
         }
+    }
+
+    public class GuestLoginViewModel : Guest
+    {
+        public decimal Temperature { get; set; }
     }
 }

@@ -9,8 +9,9 @@ namespace CSMFrontDeskApplication.Windows.Models
     public class GuestLog
     {
         public Guid? Id { get; set; }
-        public int GuestId { get; set; }
-        public string Temperature { get; set; }
+        public Guid? GuestId { get; set; }
+        public Guest Guest { get; set; }
+        public decimal Temperature { get; set; }
         public DateTime VisitAt { get; set; }
         public int Month
         {

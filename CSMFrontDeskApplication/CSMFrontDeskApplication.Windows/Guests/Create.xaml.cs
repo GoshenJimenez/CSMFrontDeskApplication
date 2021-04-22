@@ -68,11 +68,19 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 txtAge.Text = txtAge.Text.Remove(txtAge.Text.Length - 1);
                 return;
             }
+
+            int age;
+            if(!int.TryParse(txtAge.Text, out age))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                return;
+            }
             
             Guest guest = new Guest();
             guest.PersonName = txtPersonName.Text;
             guest.Address = txtAddress.Text;
             guest.Gender = gender;
+            guest.Age = age;//Convert.ToInt32(txtAge.Text);
             guest.Id = Guid.NewGuid();
             var op = GuestBLL.Create(guest);
 

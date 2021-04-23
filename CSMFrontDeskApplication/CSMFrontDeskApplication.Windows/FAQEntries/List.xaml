@@ -37,6 +37,7 @@
         <Label Content="Search" HorizontalAlignment="Left" Height="25" Margin="16,24,0,0" VerticalAlignment="Top" Width="45"/>
         <TextBox x:Name="txtSearchKeyword" HorizontalAlignment="Left" Height="25" Margin="75,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" KeyDown="txtSearchKeyword_OnKeyDownHandler"/>
         <Button x:Name="btnAdd" Content="Add New FAQ" HorizontalAlignment="Left" Height="25" Margin="622,24,0,0" VerticalAlignment="Top" Width="160" Click="btnAdd_Click"/>
+        <Button x:Name="btnWeather" Content="View Current Weather" HorizontalAlignment="Left" Margin="632,348,0,0" VerticalAlignment="Top" Width="150" Height="34" Click="btnWeather_Click"/>
 
     </Grid>
 </Window>

@@ -116,7 +116,13 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
            FAQEntries.Create createWindow = new FAQEntries.Create(this);
-            createWindow.Show();
+           createWindow.Show();
+        }
+
+        private void btnWeather_Click(object sender, RoutedEventArgs e)
+        {
+            FAQEntries.CurrentWeather currentweatherWindow = new FAQEntries.CurrentWeather(this);
+            currentweatherWindow.Show();
         }
     }
 }

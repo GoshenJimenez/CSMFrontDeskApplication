@@ -296,3 +296,9 @@ C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontD
 C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Update.baml
 C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\Update.g.cs
 C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\Update.baml
+C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\bin\Debug\RestSharp.dll
+C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\bin\Debug\RestSharp.xml
+C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\Current Weather.g.cs
+C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\Current Weather.baml

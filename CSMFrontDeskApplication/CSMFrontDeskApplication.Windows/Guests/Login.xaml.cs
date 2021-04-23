@@ -28,6 +28,7 @@ namespace CSMFrontDeskApplication.Windows.Guests
             InitializeComponent();
             cboGender.ItemsSource = new List<string>() { "None", "Male", "Female" };
             listWindow = parentWindow;
+            cboGender.SelectedValue = "None";
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
@@ -42,7 +43,6 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 MessageBox.Show("Please Enter A Address for the Guest Entry");
                 return;
             };
-            Gender gender = Gender.Male;
 
             if (cboGender.SelectedIndex == 0)
             {
@@ -50,33 +50,32 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 return;
             }
 
-            if (cboGender.SelectedIndex == 1)
-            {
-                gender = Gender.Male;
-            };
-
-            if (cboGender.SelectedIndex == 2)
-            {
-                gender = Gender.Female;
-            };
+            Gender gender = (Gender)Enum.Parse(typeof(Gender), cboGender.SelectedItem.ToString(), true);
 
             int age;
             if (!int.TryParse(txtAge.Text, out age))
             {
-                MessageBox.Show("Please enter only numbers.");
+                MessageBox.Show("Please enter only numbers for age.");
                 return;
             }
 
-            Guest log = new Guest();
-            log.PersonName = txtPersonName.Text;
-            log.Address = txtAddress.Text;
-            log.Gender = gender;
-            log.Age = age;
-            log.Id = Guid.NewGuid();
+            decimal temp;
+            if (!decimal.TryParse(txtTemperature.Text, out temp))
+            {
+                MessageBox.Show("Please enter valid decimal for temperature.");
+                return;
+            }
+
+            //Guest log = new Guest();
+            //log.PersonName = txtPersonName.Text;
+            //log.Address = txtAddress.Text;
+            //log.Gender = gender;
+            //log.Age = age;
+            //log.Id = Guid.NewGuid();
 
             var op = GuestBLL.Login(new GuestLoginViewModel()
             {
-               
+               Temperature = temp,
                 PersonName = txtPersonName.Text,
                 Address = txtAddress.Text,
                 Age = age,

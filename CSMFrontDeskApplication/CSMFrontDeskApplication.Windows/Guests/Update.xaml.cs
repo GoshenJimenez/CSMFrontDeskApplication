@@ -27,13 +27,14 @@ namespace CSMFrontDeskApplication.Windows.Guests
         public Update(Guest guest, Guests.List parentWindow)
         {
             InitializeComponent();
-            cboGender.ItemsSource = new List<string>() { "None", "Male", "Female" };
+            cboGender.ItemsSource = new List<string>() { "Male", "Female" };
             listWindow = parentWindow;
             log = guest;
 
             txtPersonName.Text = log.PersonName;
             txtAddress.Text = log.Address;
             txtAge.Text = log.Age.ToString();
+            cboGender.SelectedValue = log.Gender.ToString();
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
@@ -48,23 +49,10 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 MessageBox.Show("Please Enter A Address for the Guest Entry");
                 return;
             };
-            Gender gender = Gender.Male;
 
-            if (cboGender.SelectedIndex == 0)
-            {
-                MessageBox.Show("Please select a Gender for Guest Entry");
-                return;
-            }
 
-            if (cboGender.SelectedIndex == 1)
-            {
-                gender = Gender.Male;
-            };
+            Gender gender = (Gender)Enum.Parse(typeof(Gender), cboGender.SelectedItem.ToString(), true);
 
-            if (cboGender.SelectedIndex == 2)
-            {
-                gender = Gender.Female;
-            };
 
             int age;
             if (!int.TryParse(txtAge.Text, out age))
@@ -73,20 +61,12 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 return;
             }
 
-            Guest log = new Guest();
             log.PersonName = txtPersonName.Text;
             log.Address = txtAddress.Text;
             log.Gender = gender;
             log.Age = age;
-            log.Id = Guid.NewGuid();
 
-            var op = GuestBLL.Update(new GuestLoginViewModel()
-            {
-                PersonName = txtPersonName.Text,
-                Address = txtAddress.Text,
-                Age = age,
-                Gender = gender,
-            });
+            var op = GuestBLL.Update(log);
 
             if (op.Code.ToLower() == "ok")
             {

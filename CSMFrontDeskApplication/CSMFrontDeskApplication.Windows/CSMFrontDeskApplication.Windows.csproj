@@ -99,14 +99,17 @@
     <Compile Include="FAQEntries\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Guests\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Guests\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
     <Compile Include="Guests\GuestLog.xaml.cs">
       <DependentUpon>GuestLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\Update.xaml.cs">
+      <DependentUpon>Update.xaml</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Operation.cs" />
     <Compile Include="Models\Enums\Gender.cs" />
@@ -146,15 +149,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Guests\Create.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Guests\List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Guests\GuestLog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guests\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guests\Update.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

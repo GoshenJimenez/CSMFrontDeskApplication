@@ -7,7 +7,27 @@
         mc:Ignorable="d"
         Title="Guest" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgGuests" HorizontalAlignment="Left" Height="255" Margin="10,53,0,0" VerticalAlignment="Top" Width="772"/>
+        <DataGrid x:Name="dgGuests" HorizontalAlignment="Left" Height="264" Margin="10,65,0,0" VerticalAlignment="Top" Width="772" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name"
+                      Binding="{Binding PersonName}" Width="*" />
+                <DataGridTextColumn Header="Address"
+                      Binding="{Binding Address}" Width="*" />
+                <DataGridTextColumn Header="Age"
+                      Binding="{Binding Age}" Width="*" />
+                <DataGridTextColumn Header="Gender"
+                      Binding="{Binding Gender}" Width="*" />
+                <DataGridTextColumn Header="Temperature"
+                      Binding="{Binding Temperature}" Width="*" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnUpdate" Click="btnUpdate_Click">Update</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
         <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="36,342,0,0" VerticalAlignment="Top" Width="40" Height="34" RenderTransformOrigin="-1.605,0.544" Click="btnFirst_Click"/>
         <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="102,342,0,0" VerticalAlignment="Top" Width="40" Click="btnPrev_Click" Height="34" RenderTransformOrigin="-1.605,0.544"/>
         <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="294,342,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnNext_Click"/>

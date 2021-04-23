@@ -77,11 +77,10 @@ namespace CSMFrontDeskApplication.Windows.Guests
             {
                 ShowData();
             }
-        }
-
+        } 
         private void btnClick_Click(object sender, RoutedEventArgs e)
         {
-            Guests.Create createWindow = new Guests.Create(this);
+            Guests.Login createWindow = new Guests.Login(this);
             createWindow.Show();
         }
     }

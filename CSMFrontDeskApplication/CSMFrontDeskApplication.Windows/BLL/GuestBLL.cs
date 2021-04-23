@@ -79,6 +79,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 };
             }
         }
+
     }
 
     public class GuestLoginViewModel : Guest

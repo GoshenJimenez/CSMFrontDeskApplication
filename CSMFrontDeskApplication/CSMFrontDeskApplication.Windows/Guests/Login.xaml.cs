@@ -67,14 +67,21 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 return;
             }
 
-            Guest guest = new Guest();
-            guest.PersonName = txtPersonName.Text;
-            guest.Address = txtAddress.Text;
-            guest.Gender = gender;
-            guest.Age = age;
-            guest.Id = Guid.NewGuid();
-            
-            var op = GuestBLL.Login((GuestLoginViewModel)guest);
+            Guest log = new Guest();
+            log.PersonName = txtPersonName.Text;
+            log.Address = txtAddress.Text;
+            log.Gender = gender;
+            log.Age = age;
+            log.Id = Guid.NewGuid();
+
+            var op = GuestBLL.Login(new GuestLoginViewModel()
+            {
+               
+                PersonName = txtPersonName.Text,
+                Address = txtAddress.Text,
+                Age = age,
+                Gender = gender,
+            });
 
             if (op.Code.ToLower() == "ok")
             {

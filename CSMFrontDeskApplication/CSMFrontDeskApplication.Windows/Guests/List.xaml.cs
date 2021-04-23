@@ -1,4 +1,5 @@
 ﻿using CSMFrontDeskApplication.Windows.BLL;
+using CSMFrontDeskApplication.Windows.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace CSMFrontDeskApplication.Windows.Guests
         }
         public void ShowData()
         {
-            var guests = GuestBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
+            var guests = GuestBLL.Search((int)pageIndex, 10, txtSearchKeyword.Text);
             dgGuests.ItemsSource = guests.Items;
             pageCount = guests.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
@@ -82,6 +83,12 @@ namespace CSMFrontDeskApplication.Windows.Guests
         {
             Guests.Login createWindow = new Guests.Login(this);
             createWindow.Show();
+        }
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Guest guest = ((FrameworkElement)sender).DataContext as Guest;
+            Update updateWindow = new Update(guest, this);
+            updateWindow.Show();
         }
     }
 }

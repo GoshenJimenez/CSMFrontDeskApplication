@@ -79,6 +79,44 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 };
             }
         }
+        public static Operation Update(GuestLoginViewModel model)
+        {
+            try
+            {
+                Guest guestRecord = db.Guests.FirstOrDefault(g => g.Id == model.Id);
+
+                if (guestRecord != null)
+                {
+
+                    guestRecord.PersonName = model.PersonName;
+                    guestRecord.Address = model.Address;
+                    guestRecord.Age = model.Age;
+                    guestRecord.Gender = Models.Enums.Gender.Male;
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "Ok",
+                        Message = new List<string>() { " Guest is updated successfully." }
+                    };
+                }
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "Guest Record not Found" }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+        }
 
     }
 

@@ -208,7 +208,6 @@ C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontD
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Login.baml
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Create.g.cs
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.g.cs
-C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Create.g.cs
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\List.g.cs
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Create.g.cs
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Login.g.cs
@@ -216,7 +215,6 @@ C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplic
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Create.baml
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Birthdays\Update.baml
-C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Create.baml
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\List.baml
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Create.baml
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Login.baml
@@ -288,3 +286,5 @@ C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplic
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Update.baml
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Login.g.cs
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Update.g.cs
+C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Login.baml
+C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Update.baml

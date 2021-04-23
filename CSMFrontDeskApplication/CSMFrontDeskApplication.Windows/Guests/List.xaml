@@ -17,8 +17,6 @@
                       Binding="{Binding Age}" Width="*" />
                 <DataGridTextColumn Header="Gender"
                       Binding="{Binding Gender}" Width="*" />
-                <DataGridTextColumn Header="Temperature"
-                      Binding="{Binding Temperature}" Width="*" />
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

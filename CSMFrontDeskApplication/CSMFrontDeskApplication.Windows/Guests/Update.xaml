@@ -17,8 +17,6 @@
         <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="33" Margin="121,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316"/>
         <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="33" Margin="121,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316"/>
         <ComboBox x:Name="cboGender" HorizontalAlignment="Left" Height="38" Margin="121,216,0,0" VerticalAlignment="Top" Width="316"/>
-        <Label x:Name="lblTemperature" Content="Temperature" HorizontalAlignment="Left" Height="33" Margin="10,254,0,0" VerticalAlignment="Top" Width="106" FontFamily="Comic Sans MS"/>
-        <TextBox x:Name="txtTemperature" HorizontalAlignment="Left" Height="33" Margin="121,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316"/>
         <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Height="35" Margin="177,326,0,0" VerticalAlignment="Top" Width="119"/>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="35" Margin="318,326,0,0" VerticalAlignment="Top" Width="119" Click="btnSave_Click"/>
 

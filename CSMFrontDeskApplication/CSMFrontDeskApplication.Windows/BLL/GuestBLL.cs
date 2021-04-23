@@ -79,7 +79,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 };
             }
         }
-        public static Operation Update(GuestLoginViewModel model)
+        public static Operation Update(Guest model)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
                     guestRecord.PersonName = model.PersonName;
                     guestRecord.Address = model.Address;
                     guestRecord.Age = model.Age;
-                    guestRecord.Gender = Models.Enums.Gender.Male;
+                    guestRecord.Gender = model.Gender;
                     db.SaveChanges();
 
                     return new Operation()

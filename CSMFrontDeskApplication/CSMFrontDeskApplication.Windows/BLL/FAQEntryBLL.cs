@@ -42,7 +42,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
                 return new Operation()
                 {
                     Code = "Ok",
-                    Message = new List<string>() { "Question is created successfully." }
+                    Message = new List<string>() { "FAQ is created successfully." }
                 };
 
             }
@@ -56,11 +56,102 @@ namespace CSMFrontDeskApplication.Windows.BLL
             }
 
         }
+        public static Operation Add(FAQEntry model)
+        {
+            try
+            {
+                model.Status = Models.Enums.RecordStatus.Active;
+                db.FAQEntries.Add(model);
+                db.SaveChanges();
 
-        
-                        
-      
-     
-     
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "FAQ is created successfully." }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+        }
+        public static Operation Update(FAQEntry model)
+        {
+            try
+            {
+                FAQEntry faqentryRecord = db.FAQEntries.FirstOrDefault(s => s.Id == model.Id);
+
+                if (faqentryRecord != null)
+                {
+                    faqentryRecord.Question = model.Question;
+                    faqentryRecord.Answer = model.Answer;
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "Ok",
+                        Message = new List<string>() { " FAQ is updated successfully." }
+                    };
+                }
+                
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "FAQ not Found" }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+
+
+        }
+        public static Operation Delete(FAQEntry model)
+        {
+            try
+            {
+                FAQEntry faqentryRecord = db.FAQEntries.FirstOrDefault(s => s.Id == model.Id);
+
+                if (faqentryRecord != null)
+                {
+                    model.Status = Models.Enums.RecordStatus.Inactive;
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "Ok",
+                        Message = new List<string>() { " FAQ is Deleted successfully." }
+                    };
+                }
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "FAQ not Found" }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+
+        }
     }
 }
+

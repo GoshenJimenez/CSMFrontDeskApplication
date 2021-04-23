@@ -1,4 +1,5 @@
 ﻿using CSMFrontDeskApplication.Windows.BLL;
+using CSMFrontDeskApplication.Windows.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ using System.Windows.Shapes;
 namespace CSMFrontDeskApplication.Windows.FAQEntries
 {
     /// <summary>
-    /// Interaction logic for FAQEntry.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
     public partial class List : Window
     {
@@ -29,12 +30,43 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
             ShowData();
         }
 
+
         public void ShowData()
         {
-            var faqentries = FAQEntryBLL.Search((int)pageIndex, 1, txtSearchKeyword.Text);
+            var faqentries = FAQEntryBLL.Search((int)pageIndex, 10, txtSearchKeyword.Text);
             dgFAQEntries.ItemsSource = faqentries.Items;
             pageCount = faqentries.PageCount;
             lblPage.Content = " Showing page " + pageIndex + " of " + pageCount;
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            FAQEntry faqentry= ((FrameworkElement)sender).DataContext as FAQEntry;
+            Update updateWindow = new Update(faqentry, this);
+            updateWindow.Show();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            FAQEntry faqentry = ((FrameworkElement)sender).DataContext as FAQEntry;
+            if (MessageBox.Show(" Do you want to Delete FAQ entry for" + faqentry.Question +
+                            " in" + faqentry.Answer + " ?", " Are you Sure?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+
+                var op = FAQEntryBLL.Delete(faqentry);
+
+                if (op.Code.ToLower() == "ok")
+                {
+                    ShowData();
+                    MessageBox.Show(op.Message.FirstOrDefault());
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(op.Message.FirstOrDefault());
+                }
+            }
+
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
@@ -83,7 +115,7 @@ namespace CSMFrontDeskApplication.Windows.FAQEntries
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            FAQEntries.Create createWindow = new FAQEntries.Create(this);
+           FAQEntries.Create createWindow = new FAQEntries.Create(this);
             createWindow.Show();
         }
     }

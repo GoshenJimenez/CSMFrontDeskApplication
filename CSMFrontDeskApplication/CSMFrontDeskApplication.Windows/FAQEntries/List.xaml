@@ -5,17 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSMFrontDeskApplication.Windows.FAQEntries"
         mc:Ignorable="d"
-        Title="List" Height="498" Width="906">
+        Title="Window1" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgFAQEntries" HorizontalAlignment="Left" Height="268" Margin="35,110,0,0" VerticalAlignment="Top" Width="816"/>
-        <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="35,400,0,0" VerticalAlignment="Top" Width="59" Height="42" RenderTransformOrigin="-1.605,0.544" Click="btnFirst_Click"/>
-        <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="109,400,0,0" VerticalAlignment="Top" Width="59" Click="btnPrev_Click" Height="42" RenderTransformOrigin="-1.605,0.544"/>
-        <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="390,400,0,0" VerticalAlignment="Top" Width="64" Height="42" Click="btnNext_Click" RenderTransformOrigin="0.4,0.147"/>
-        <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="459,400,0,25" Width="60" Click="btnLast_Click"/>
-        <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="196,400,0,0" VerticalAlignment="Top" Width="174" Height="42"/>
-        <Label Content="Search" HorizontalAlignment="Left" Height="43" Margin="49,36,0,0" VerticalAlignment="Top" Width="84"/>
-        <TextBox x:Name="txtSearchKeyword" HorizontalAlignment="Left" Height="55" Margin="162,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="371" KeyDown="txtSearchKeyword_OnKeyDownHandler" RenderTransformOrigin="0.444,0.6"/>
-        <Button x:Name="btnAdd" Content="Add New Questions" HorizontalAlignment="Left" Height="55" Margin="622,36,0,0" VerticalAlignment="Top" Width="229" Click="btnAdd_Click"/>
+        <DataGrid x:Name="dgFAQEntries" HorizontalAlignment="Left" Height="264" Margin="10,65,0,0" VerticalAlignment="Top" Width="772" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Question"
+                      Binding="{Binding Question}" Width="*" />
+                <DataGridTextColumn Header="Answer"
+                      Binding="{Binding Answer}" Width="*" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnUpdate" Click="btnUpdate_Click">Update</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnDelete" Click="btnDelete_Click">Delete</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="32,348,0,0" VerticalAlignment="Top" Width="40" Height="34" RenderTransformOrigin="-1.605,0.544" Click="btnFirst_Click"/>
+        <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="90,348,0,0" VerticalAlignment="Top" Width="40" Click="btnPrev_Click" Height="34" RenderTransformOrigin="-1.605,0.544"/>
+        <Label x:Name="lblPage" Content="" HorizontalAlignment="Left" Margin="151,356,0,0" VerticalAlignment="Top" Width="142"/>
+        <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="298,348,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnNext_Click"/>
+        <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="358,348,0,0" VerticalAlignment="Top" Width="40" Height="34" Click="btnLast_Click"/>
+        <Label Content="Search" HorizontalAlignment="Left" Height="25" Margin="16,24,0,0" VerticalAlignment="Top" Width="45"/>
+        <TextBox x:Name="txtSearchKeyword" HorizontalAlignment="Left" Height="25" Margin="75,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" KeyDown="txtSearchKeyword_OnKeyDownHandler"/>
+        <Button x:Name="btnAdd" Content="Add New FAQ" HorizontalAlignment="Left" Height="25" Margin="622,24,0,0" VerticalAlignment="Top" Width="160" Click="btnAdd_Click"/>
 
     </Grid>
 </Window>

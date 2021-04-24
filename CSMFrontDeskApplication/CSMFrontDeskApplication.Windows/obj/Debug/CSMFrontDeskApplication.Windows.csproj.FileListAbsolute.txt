@@ -270,11 +270,9 @@ C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontD
 C:\Users\Nicole\OneDrive\Documents\Major\FINAL\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\CSMFrontDeskApplication.Windows.csproj.CopyComplete
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\Create.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\List.g.cs
-C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Create.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\List.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\Create.baml
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\FAQEntries\List.baml
-C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Create.baml
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\List.baml
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Update.g.cs
 C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\StudentAssistants\Update.baml
@@ -288,3 +286,7 @@ C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplic
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Update.g.cs
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Login.baml
 C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Update.baml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Login.g.cs
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Update.g.cs
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Login.baml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\Guests\Update.baml

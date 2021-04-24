@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\obj\Debug\
 CSMFrontDeskApplication.Windows
 none
 false
 DEBUG;TRACE
-C:\Users\hp\Documents\Major Activity\CSM FrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\App.xaml
+C:\Users\Dell\Documents\Work Immersion Project\CSMFrontDeskApplication\CSMFrontDeskApplication\CSMFrontDeskApplication.Windows\App.xaml
 151769100185
 
 401605396699
-27-919619176
+27-710478986
 Birthdays\Create.xaml;Birthdays\List.xaml;Birthdays\Update.xaml;FAQEntries\Create.xaml;FAQEntries\List.xaml;Guests\List.xaml;Guests\GuestLog.xaml;Guests\Login.xaml;Guests\Update.xaml;MainWindow.xaml;StudentAssistants\Create.xaml;StudentAssistants\Login.xaml;StudentAssistants\StudentAssistantLog.xaml;StudentAssistants\List.xaml;StudentAssistants\Update.xaml;
 
-False
+True
 

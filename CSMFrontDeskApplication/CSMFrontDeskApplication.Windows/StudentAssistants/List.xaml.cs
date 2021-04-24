@@ -46,6 +46,29 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             updateWindow.Show();
         }
 
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            StudentAssistant studentassistant = ((FrameworkElement)sender).DataContext as StudentAssistant;
+            if (MessageBox.Show(" Do you want to Delete Student Assistant entry for" + studentassistant.PersonName +
+                            " in" + studentassistant.Course + " With this Username" + studentassistant.Username + " ?", " Are you Sure?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+
+                var op = StudentAssistantBLL.Delete(studentassistant);
+
+                if (op.Code.ToLower() == "ok")
+                {
+                    ShowData();
+                    MessageBox.Show(op.Message.FirstOrDefault());
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(op.Message.FirstOrDefault());
+                }
+            }
+
+        }
+
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             pageIndex = pageIndex + 1;

@@ -62,7 +62,7 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
             };
 
 
-           
+            
             assistant.PersonName = txtPersonName.Text;
             assistant.Course = txtCourse.Text;
             assistant.Username = txtUsername.Text;

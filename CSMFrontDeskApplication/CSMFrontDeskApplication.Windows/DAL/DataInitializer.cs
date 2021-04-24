@@ -65,6 +65,15 @@ namespace CSMFrontDeskApplication.Windows.DAL
             context.StudentAssistants.Add(new Models.StudentAssistant()
             {
                 Id = Guid.NewGuid(),
+                PersonName = "Ivan Arsua",
+                Course = " BSIS201",
+                Username = "IvnArs",
+                Password = DevOne.Security.Cryptography.BCrypt.BCryptHelper.HashPassword("IvnArs", salt)
+            });
+
+            context.StudentAssistants.Add(new Models.StudentAssistant()
+            {
+                Id = Guid.NewGuid(),
                 PersonName = "Natsu Dragneel",
                 Course = "BSIS201",
                 Username = "NtuDgl",

@@ -19,7 +19,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
         }
         public static Paged<StudentAssistant> Search(int pageIndex = 1, int pageSize = 10, string keyword = "")
         {
-            var studentassistants = db.StudentAssistants.Where(s => s.PersonName.ToLower().Contains(keyword.ToLower()));
+            var studentassistants = db.StudentAssistants.Where(b => b.Status == Models.Enums.RecordStatus.Active).Where(s => s.PersonName.ToLower().Contains(keyword.ToLower()));
 
             return new Paged<StudentAssistant>()
             {
@@ -35,6 +35,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
         {
             try
             {
+                model.Status = Models.Enums.RecordStatus.Active;
                 db.StudentAssistants.Add(model);
                 db.SaveChanges();
 
@@ -117,7 +118,7 @@ namespace CSMFrontDeskApplication.Windows.BLL
 
                 if (studentassistantRecord != null)
                 {
-
+                    model.Status = Models.Enums.RecordStatus.Active;
                     studentassistantRecord.PersonName = model.PersonName;
                     studentassistantRecord.Course = model.Course;
                     studentassistantRecord.Username = model.Username;
@@ -128,6 +129,42 @@ namespace CSMFrontDeskApplication.Windows.BLL
                     {
                         Code = "Ok",
                         Message = new List<string>() { " Student Assistant is updated successfully." }
+                    };
+                }
+
+                return new Operation()
+                {
+                    Code = "Ok",
+                    Message = new List<string>() { "Student Assistant Record not Found" }
+                };
+
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "Fail",
+                    Message = new List<string>() { e.Message }
+                };
+            }
+
+        }
+        public static Operation Delete(StudentAssistant model)
+        {
+            try
+            {
+                StudentAssistant studentassistantRecord = db.StudentAssistants.FirstOrDefault(s => s.Id == model.Id);
+
+                if (studentassistantRecord != null)
+                {
+                    model.Status = Models.Enums.RecordStatus.Inactive;
+                    //db.StudentAssistants.Remove(studentassistantRecord);
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "Ok",
+                        Message = new List<string>() { " Student Assistant is Deleted successfully." }
                     };
                 }
 

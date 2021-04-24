@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSMFrontDeskApplication.Windows.StudentAssistants"
         mc:Ignorable="d"
-        Title="Update Student Assistant Entry" Height="292.5" Width="357.5">
+        Title="Create Student Assistant Entry" Height="292.5" Width="357.5">
     <Grid Margin="0,0,2,0" RenderTransformOrigin="0.461,0.619">
 
-        <Label Content="Update New Student Assistant Entry" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" VerticalAlignment="Top" Width="327" FontFamily="Ink Free" FontSize="16"/>
+        <Label Content="Create New Student Assistant Entry" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" VerticalAlignment="Top" Width="327" FontFamily="Ink Free" FontSize="16"/>
         <TextBlock HorizontalAlignment="Left" Height="36" Margin="10,48,0,0" TextWrapping="Wrap" Text="Update a new Student Assistant Entry for the Student Assistant section of the welcome screen" VerticalAlignment="Top" Width="318" FontFamily="Ink Free"/>
         <Label x:Name="lblPersonName" Content="Person's Name" HorizontalAlignment="Left" Height="26" Margin="10,89,0,0" VerticalAlignment="Top" Width="92"/>
         <TextBox x:Name="txtPersonName" HorizontalAlignment="Left" Height="26" Margin="107,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
@@ -18,8 +18,8 @@
         <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="26" Margin="107,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
         <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Height="26" Margin="10,182,0,0" VerticalAlignment="Top" Width="92"/>
         <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="26" Margin="107,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="22" Margin="254,222,0,0" VerticalAlignment="Top" Width="74"/>
         <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Height="22" Margin="175,222,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="22" Margin="254,222,0,0" VerticalAlignment="Top" Width="74" Click="btnSave_Click"/>
 
     </Grid>
 

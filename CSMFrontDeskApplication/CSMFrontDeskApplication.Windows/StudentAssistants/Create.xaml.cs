@@ -22,6 +22,7 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
     public partial class Create : Window
     {
         private StudentAssistants.List listWindow;
+
         public Create(StudentAssistants.List parentWindow)
         {
             InitializeComponent();
@@ -30,7 +31,6 @@ namespace CSMFrontDeskApplication.Windows.StudentAssistants
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
             if (string.IsNullOrEmpty(txtPersonName.Text))
             {
                 MessageBox.Show("Please Enter A Person's Name for the Student Assistant Entry");

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSMFrontDeskApplication.Windows.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace CSMFrontDeskApplication.Windows.Models
         public string Course { get; set; }
         public string Username { get; set; }
         public string Password { get; set;  }
+        public RecordStatus Status { get; set; }
 
     }
 }

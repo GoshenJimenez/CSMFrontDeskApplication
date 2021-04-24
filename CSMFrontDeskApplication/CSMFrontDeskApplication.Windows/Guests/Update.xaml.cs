@@ -78,17 +78,11 @@ namespace CSMFrontDeskApplication.Windows.Guests
             {
                 MessageBox.Show(op.Message.FirstOrDefault());
             }
+        }
 
-            if (op.Code.ToLower() == "ok")
-            {
-                listWindow.ShowData();
-                MessageBox.Show(op.Message.FirstOrDefault());
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show(op.Message.FirstOrDefault());
-            }
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

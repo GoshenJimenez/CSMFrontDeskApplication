@@ -93,5 +93,10 @@ namespace CSMFrontDeskApplication.Windows.Guests
                 MessageBox.Show(op.Message.FirstOrDefault());
             }
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
